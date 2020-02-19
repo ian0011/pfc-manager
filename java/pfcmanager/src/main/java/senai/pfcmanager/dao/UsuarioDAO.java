@@ -13,15 +13,15 @@ public class UsuarioDAO {
         bd = new Database("localhost", "pfcmanager", "root", "root");
     }
 
-    public Usuario consultarPorLoginSenha(String login, String senha) {
+    public Usuario consultarPorEmailSenha(String email, String senha) {
         try {
-            ResultSet rs = bd.consultar("select * from usuario where login = '" + login + "' and senha = " + senha + "'");
+            ResultSet rs = bd.consultar("select * from usuarios where email_usuario = '" + email + "' and senha_usuario = '" + senha + "'");
 
             if (rs.next()) {
                 Usuario usuario = new Usuario();
-                usuario.setId(rs.getInt("id"));
-                usuario.setNome(rs.getString("login"));
-                usuario.setSenha(rs.getString("senha"));
+                usuario.setId(rs.getInt("id_usuario"));
+                usuario.setEmail(rs.getString("email_usuario"));
+                usuario.setSenha(rs.getString("senha_usuario"));
                 return usuario;
             } else {
                 return null;

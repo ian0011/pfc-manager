@@ -23,7 +23,8 @@ public class Database {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
+    //Método responsável por abrir uma conexão com o banco e criar o Statement
     private ResultSet executar(String sql, int tipo) throws SQLException {
         con = DriverManager.getConnection(url, usuario, senha);
         stm = con.createStatement();
