@@ -11,42 +11,7 @@ package senai.pfcmanager.model;
  */
 public class BancaBean {
     private int id;
-    private DocenteBean orientador;
-    private DocenteBean gta;
+    private String orientador;
+    private String gta;
     private BaremaBean barema;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public DocenteBean getOrientador() {
-        return orientador;
-    }
-
-    public void setOrientador(DocenteBean orientador) {
-        this.orientador = orientador;
-    }
-
-    public DocenteBean getGta() {
-        return gta;
-    }
-
-    public void setGta(DocenteBean gta) {
-        this.gta = gta;
-    }
-
-    public BaremaBean getBarema() {
-        return barema;
-    }
-
-    public void setBarema(BaremaBean barema) {
-        this.barema = barema;
-    }
-    
-    
-    
 }

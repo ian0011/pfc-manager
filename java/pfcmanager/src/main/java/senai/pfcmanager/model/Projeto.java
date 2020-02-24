@@ -9,7 +9,7 @@ package senai.pfcmanager.model;
  *
  * @author Caio
  */
-public class ProjetoBean {
+public class Projeto {
     private int id;
     private String cliente;
     private String tipoProjeto;
@@ -118,8 +118,6 @@ public class ProjetoBean {
     public void setBarema(BaremaBean barema) {
         this.barema = barema;
     }
-    
-    
-   
+
     
 }

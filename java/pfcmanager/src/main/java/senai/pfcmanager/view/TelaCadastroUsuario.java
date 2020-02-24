@@ -70,7 +70,7 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxPerfilUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Básico" }));
+        jComboBoxPerfilUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "GTA", "Visitante" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
