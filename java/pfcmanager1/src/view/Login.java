@@ -5,9 +5,12 @@
  */
 package view;
 
+import dao.UsuarioDAO;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import model.Usuario;
 
 /**
  *
@@ -37,8 +40,8 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        jTextFieldEmailLogin = new javax.swing.JTextField();
+        jPasswordFieldSenhaLogin = new javax.swing.JPasswordField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
@@ -64,15 +67,15 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("E-mail:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 290, -1));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 102, 153));
-        jTextField1.setBorder(null);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 290, 30));
+        jTextFieldEmailLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextFieldEmailLogin.setForeground(new java.awt.Color(0, 102, 153));
+        jTextFieldEmailLogin.setBorder(null);
+        jPanel2.add(jTextFieldEmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 290, 30));
 
-        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(0, 102, 153));
-        jPasswordField1.setBorder(null);
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 290, 30));
+        jPasswordFieldSenhaLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPasswordFieldSenhaLogin.setForeground(new java.awt.Color(0, 102, 153));
+        jPasswordFieldSenhaLogin.setBorder(null);
+        jPanel2.add(jPasswordFieldSenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 290, 30));
 
         jSeparator1.setForeground(new java.awt.Color(0, 102, 153));
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 290, 10));
@@ -95,6 +98,9 @@ public class Login extends javax.swing.JFrame {
         jLabelEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabelEntrar.setOpaque(true);
         jLabelEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelEntrarMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabelEntrarMouseEntered(evt);
             }
@@ -140,6 +146,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabelCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseClicked
@@ -166,6 +173,29 @@ public class Login extends javax.swing.JFrame {
         // TODO add your handling code here:
         jLabelClose.setBorder(BorderFactory.createEmptyBorder());
     }//GEN-LAST:event_jLabelCloseMouseExited
+
+    private void jLabelEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseClicked
+        // TODO add your handling code here:
+        String email = jTextFieldEmailLogin.getText();
+        String senha = new String(jPasswordFieldSenhaLogin.getPassword());
+        
+        if(email.equals("")){
+            JOptionPane.showMessageDialog(this, "Email não informado");
+        }else if(senha.equals("")){
+            JOptionPane.showMessageDialog(this, "Senha não informada");
+        }else{
+            UsuarioDAO uDAO = new UsuarioDAO();
+            Usuario u = uDAO.consultarPorEmailSenha(email, senha);
+            
+            if(u != null){
+                Principal tela = new Principal();
+                tela.setVisible(rootPaneCheckingEnabled);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(this, "Email e/ou senha incorreto(s)");
+            }
+        }        
+    }//GEN-LAST:event_jLabelEntrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -210,9 +240,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelEntrar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JPasswordField jPasswordFieldSenhaLogin;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldEmailLogin;
     // End of variables declaration//GEN-END:variables
 }
