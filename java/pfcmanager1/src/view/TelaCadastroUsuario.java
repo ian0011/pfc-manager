@@ -34,110 +34,126 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jTextFieldNomeUsuario = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        jTextFieldEmailUsuario = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jPasswordFieldSenhaUsuario = new javax.swing.JPasswordField();
-        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jPasswordFieldConfirmarSenhaUsuario = new javax.swing.JPasswordField();
-        jSeparator2 = new javax.swing.JSeparator();
-        Cadastrar = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jPasswordFieldSenhaUsuario = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextFieldEmailUsuario = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextFieldNomeUsuario = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jComboBoxPerfilUsuario = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jButtonCadastrar = new javax.swing.JButton();
+        jButtonCancelar = new javax.swing.JButton();
+        jLabelClose = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Cadastro de Usuário");
+        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setText("Perfil:");
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("Nome:");
+        jPasswordFieldConfirmarSenhaUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPasswordFieldConfirmarSenhaUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jPasswordFieldConfirmarSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 300, -1));
 
-        jLabel4.setText("Email:");
-
-        jLabel5.setText("Senha:");
-
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 51, 102));
         jLabel6.setText("Cofirme a senha:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
-        Cadastrar.setText("Cadastrar");
-        Cadastrar.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldSenhaUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPasswordFieldSenhaUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jPasswordFieldSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 300, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel5.setText("Senha:");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+
+        jTextFieldEmailUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldEmailUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jTextFieldEmailUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 300, -1));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel4.setText("Email:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        jTextFieldNomeUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldNomeUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jTextFieldNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 300, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel3.setText("Nome:");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jComboBoxPerfilUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxPerfilUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxPerfilUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "GTA", "Visitante" }));
+        jPanel2.add(jComboBoxPerfilUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 300, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel2.setText("Perfil:");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel1.setText("Novo Usuário");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonCadastrar.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonCadastrar.setText("Cadastrar");
+        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CadastrarActionPerformed(evt);
+                jButtonCadastrarActionPerformed(evt);
             }
         });
+        jPanel3.add(jButtonCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, -1, -1));
 
-        jComboBoxPerfilUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "GTA", "Visitante" }));
+        jButtonCancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonCancelar.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonCancelar.setText("Cancelar");
+        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelarActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator1)
-            .addComponent(jSeparator2)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldNomeUsuario)
-                    .addComponent(jTextFieldEmailUsuario)
-                    .addComponent(jPasswordFieldSenhaUsuario)
-                    .addComponent(jPasswordFieldConfirmarSenhaUsuario)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(Cadastrar))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel6))
-                        .addGap(0, 144, Short.MAX_VALUE))
-                    .addComponent(jComboBoxPerfilUsuario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBoxPerfilUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldEmailUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordFieldSenhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPasswordFieldConfirmarSenhaUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Cadastrar)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 340, 70));
+
+        jLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelCloseMouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 340, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 380, 580));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastrarActionPerformed
+    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
         // TODO add your handling code here:
         String senha = jPasswordFieldSenhaUsuario.getText();
         String senhaConfirm = jPasswordFieldConfirmarSenhaUsuario.getText();
@@ -169,7 +185,17 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
         }
 
 
-    }//GEN-LAST:event_CadastrarActionPerformed
+    }//GEN-LAST:event_jButtonCadastrarActionPerformed
+
+    private void jLabelCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelCloseMouseClicked
+
+    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButtonCancelarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -208,7 +234,8 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Cadastrar;
+    private javax.swing.JButton jButtonCadastrar;
+    private javax.swing.JButton jButtonCancelar;
     private javax.swing.JComboBox<String> jComboBoxPerfilUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -216,10 +243,12 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabelClose;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField jPasswordFieldConfirmarSenhaUsuario;
     private javax.swing.JPasswordField jPasswordFieldSenhaUsuario;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTextField jTextFieldEmailUsuario;
     private javax.swing.JTextField jTextFieldNomeUsuario;
     // End of variables declaration//GEN-END:variables

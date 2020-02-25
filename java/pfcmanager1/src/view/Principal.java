@@ -182,7 +182,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("PFC Manager");
-        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 1070, -1));
+        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 1370, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -680,6 +680,8 @@ public class Principal extends javax.swing.JFrame {
 
     private void jLabelUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuariosMouseClicked
         // TODO add your handling code here:
+        TelaCadastroUsuario tela = new TelaCadastroUsuario();
+        tela.setVisible(true);
     }//GEN-LAST:event_jLabelUsuariosMouseClicked
 
     private void jLabelConfiguracoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelConfiguracoesMouseClicked
