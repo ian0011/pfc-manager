@@ -18,6 +18,7 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+        jPanelOpcoes.setVisible(false);
     }
 
     /**
@@ -30,16 +31,22 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanelOpcoes = new javax.swing.JPanel();
+        jLabelSair = new javax.swing.JLabel();
+        jLabelMinhaConta = new javax.swing.JLabel();
+        jLabelUsuarios = new javax.swing.JLabel();
+        jSeparator5 = new javax.swing.JSeparator();
+        jLabelConfiguracoes = new javax.swing.JLabel();
+        jPanelCabecalho = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabelOpcoes = new javax.swing.JLabel();
         jPanelMenu = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabelRelatorios = new javax.swing.JLabel();
         jLabelDashboard = new javax.swing.JLabel();
         jLabelProjetos = new javax.swing.JLabel();
         jLabelHistorico = new javax.swing.JLabel();
-        jPanelCabecalho = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jPanelConteudo = new javax.swing.JPanel();
         jPanelDashboard = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -89,6 +96,108 @@ public class Principal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanelOpcoes.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelSair.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelSair.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSair.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelSair.setText("   Sair");
+        jLabelSair.setOpaque(true);
+        jLabelSair.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSairMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelSairMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelSairMouseExited(evt);
+            }
+        });
+        jPanelOpcoes.add(jLabelSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 220, 50));
+
+        jLabelMinhaConta.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelMinhaConta.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelMinhaConta.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelMinhaConta.setText("   Minha Conta");
+        jLabelMinhaConta.setOpaque(true);
+        jLabelMinhaConta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelMinhaContaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelMinhaContaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelMinhaContaMouseExited(evt);
+            }
+        });
+        jPanelOpcoes.add(jLabelMinhaConta, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 50));
+
+        jLabelUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelUsuarios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelUsuarios.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelUsuarios.setText("   Usuários");
+        jLabelUsuarios.setOpaque(true);
+        jLabelUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelUsuariosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelUsuariosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelUsuariosMouseExited(evt);
+            }
+        });
+        jPanelOpcoes.add(jLabelUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 220, 50));
+        jPanelOpcoes.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 220, 10));
+
+        jLabelConfiguracoes.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelConfiguracoes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelConfiguracoes.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelConfiguracoes.setText("   Configurações");
+        jLabelConfiguracoes.setOpaque(true);
+        jLabelConfiguracoes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelConfiguracoesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelConfiguracoesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelConfiguracoesMouseExited(evt);
+            }
+        });
+        jPanelOpcoes.add(jLabelConfiguracoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 50));
+
+        jPanel1.add(jPanelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 220, 230));
+
+        jPanelCabecalho.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelCabecalho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("PFC Manager");
+        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 1070, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Ricardo Mendes");
+        jPanelCabecalho.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
+
+        jLabelOpcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/more_vert-24.png"))); // NOI18N
+        jLabelOpcoes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelOpcoesMouseClicked(evt);
+            }
+        });
+        jPanelCabecalho.add(jLabelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
+
+        jPanel1.add(jPanelCabecalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 60));
 
         jPanelMenu.setBackground(new java.awt.Color(0, 51, 102));
         jPanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -172,25 +281,6 @@ public class Principal extends javax.swing.JFrame {
         jPanelMenu.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 620));
-
-        jPanelCabecalho.setBackground(new java.awt.Color(0, 102, 153));
-        jPanelCabecalho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("PFC Manager");
-        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 1370, -1));
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Ricardo Mendes");
-        jPanelCabecalho.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(1190, 20, -1, -1));
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/more_vert-24.png"))); // NOI18N
-        jPanelCabecalho.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
-
-        jPanel1.add(jPanelCabecalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 60));
 
         jPanelConteudo.setLayout(new java.awt.CardLayout());
 
@@ -535,6 +625,72 @@ public class Principal extends javax.swing.JFrame {
         tela.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_jLabel3MouseClicked
 
+    private void jLabelMinhaContaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinhaContaMouseEntered
+        // TODO add your handling code here:
+        jLabelMinhaConta.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelMinhaContaMouseEntered
+
+    private void jLabelOpcoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelOpcoesMouseClicked
+        // TODO add your handling code here:
+        if (!jPanelOpcoes.isVisible()) {
+            jPanelOpcoes.setVisible(true);
+        } else {
+            jPanelOpcoes.setVisible(false);
+        }
+    }//GEN-LAST:event_jLabelOpcoesMouseClicked
+
+    private void jLabelMinhaContaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinhaContaMouseExited
+        // TODO add your handling code here:
+        jLabelMinhaConta.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelMinhaContaMouseExited
+
+    private void jLabelUsuariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuariosMouseEntered
+        // TODO add your handling code here:
+        jLabelUsuarios.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelUsuariosMouseEntered
+
+    private void jLabelUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuariosMouseExited
+        // TODO add your handling code here:
+        jLabelUsuarios.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelUsuariosMouseExited
+
+    private void jLabelConfiguracoesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelConfiguracoesMouseEntered
+        // TODO add your handling code here:
+        jLabelConfiguracoes.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelConfiguracoesMouseEntered
+
+    private void jLabelConfiguracoesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelConfiguracoesMouseExited
+        // TODO add your handling code here:
+        jLabelConfiguracoes.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelConfiguracoesMouseExited
+
+    private void jLabelSairMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSairMouseEntered
+        // TODO add your handling code here:
+        jLabelSair.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelSairMouseEntered
+
+    private void jLabelSairMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSairMouseExited
+        // TODO add your handling code here:
+        jLabelSair.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelSairMouseExited
+
+    private void jLabelMinhaContaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinhaContaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelMinhaContaMouseClicked
+
+    private void jLabelUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuariosMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelUsuariosMouseClicked
+
+    private void jLabelConfiguracoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelConfiguracoesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelConfiguracoesMouseClicked
+
+    private void jLabelSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSairMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jLabelSairMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -595,12 +751,16 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelConfiguracoes;
     private javax.swing.JLabel jLabelDashboard;
     private javax.swing.JLabel jLabelHistorico;
+    private javax.swing.JLabel jLabelMinhaConta;
+    private javax.swing.JLabel jLabelOpcoes;
     private javax.swing.JLabel jLabelProjetos;
     private javax.swing.JLabel jLabelRelatorios;
+    private javax.swing.JLabel jLabelSair;
+    private javax.swing.JLabel jLabelUsuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
@@ -616,6 +776,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelDashboard;
     private javax.swing.JPanel jPanelHistorico;
     private javax.swing.JPanel jPanelMenu;
+    private javax.swing.JPanel jPanelOpcoes;
     private javax.swing.JPanel jPanelProjetos;
     private javax.swing.JPanel jPanelRelatorios;
     private javax.swing.JScrollPane jScrollPane1;
@@ -623,6 +784,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;

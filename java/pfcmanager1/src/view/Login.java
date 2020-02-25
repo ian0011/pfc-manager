@@ -67,12 +67,12 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setText("E-mail:");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 290, -1));
 
-        jTextFieldEmailLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextFieldEmailLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextFieldEmailLogin.setForeground(new java.awt.Color(0, 102, 153));
         jTextFieldEmailLogin.setBorder(null);
         jPanel2.add(jTextFieldEmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 290, 30));
 
-        jPasswordFieldSenhaLogin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPasswordFieldSenhaLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordFieldSenhaLogin.setForeground(new java.awt.Color(0, 102, 153));
         jPasswordFieldSenhaLogin.setBorder(null);
         jPanel2.add(jPasswordFieldSenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 290, 30));
