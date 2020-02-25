@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 
 /**
@@ -41,8 +42,8 @@ public class Login extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jLabelEntrar = new javax.swing.JLabel();
+        jLabelClose = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -85,38 +86,39 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("PFC Manager");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 290, -1));
 
-        jLabel4.setBackground(new java.awt.Color(0, 102, 153));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Entrar");
-        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel4.setOpaque(true);
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabelEntrar.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelEntrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelEntrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelEntrar.setText("Entrar");
+        jLabelEntrar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jLabelEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jLabelEntrar.setOpaque(true);
+        jLabelEntrar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel4MouseEntered(evt);
+                jLabelEntrarMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
+                jLabelEntrarMouseExited(evt);
             }
         });
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 290, 40));
+        jPanel2.add(jLabelEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 290, 40));
 
-        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
-        jLabel5.setOpaque(true);
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabelClose.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose.setOpaque(true);
+        jLabelClose.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                jLabelCloseMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
+                jLabelCloseMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
+                jLabelCloseMouseExited(evt);
             }
         });
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
+        jPanel2.add(jLabelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -140,30 +142,30 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void jLabelCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseClicked
         // TODO add your handling code here:
         System.exit(0);
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_jLabelCloseMouseClicked
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
+    private void jLabelEntrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseEntered
         // TODO add your handling code here:
-        jLabel4.setBackground(Color.red);
-    }//GEN-LAST:event_jLabel4MouseEntered
+        jLabelEntrar.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0,102,153)));
+    }//GEN-LAST:event_jLabelEntrarMouseEntered
 
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
+    private void jLabelEntrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseExited
         // TODO add your handling code here:
-        jLabel4.setBackground(Color.blue);
-    }//GEN-LAST:event_jLabel4MouseExited
+        jLabelEntrar.setBorder(BorderFactory.createLineBorder(Color.WHITE));
+    }//GEN-LAST:event_jLabelEntrarMouseExited
 
-    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+    private void jLabelCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseEntered
         // TODO add your handling code here:
-        jLabel5.setBackground(Color.red);
-    }//GEN-LAST:event_jLabel5MouseEntered
+        jLabelClose.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0,102,153)));
+    }//GEN-LAST:event_jLabelCloseMouseEntered
 
-    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+    private void jLabelCloseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseExited
         // TODO add your handling code here:
-        jLabel5.setBackground(Color.white);
-    }//GEN-LAST:event_jLabel5MouseExited
+        jLabelClose.setBorder(BorderFactory.createEmptyBorder());
+    }//GEN-LAST:event_jLabelCloseMouseExited
 
     /**
      * @param args the command line arguments
@@ -204,8 +206,8 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelClose;
+    private javax.swing.JLabel jLabelEntrar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordField1;

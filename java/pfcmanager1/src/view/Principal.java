@@ -35,6 +35,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        jPanelDashboard = new javax.swing.JPanel();
+        jPanelProjetos = new javax.swing.JPanel();
+        jPanelHistoria = new javax.swing.JPanel();
+        jPanelRelatorios = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,7 +84,68 @@ public class Principal extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 40));
 
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setLayout(new java.awt.CardLayout());
+
+        jPanelDashboard.setBackground(new java.awt.Color(204, 255, 255));
+
+        javax.swing.GroupLayout jPanelDashboardLayout = new javax.swing.GroupLayout(jPanelDashboard);
+        jPanelDashboard.setLayout(jPanelDashboardLayout);
+        jPanelDashboardLayout.setHorizontalGroup(
+            jPanelDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        jPanelDashboardLayout.setVerticalGroup(
+            jPanelDashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanelDashboard, "card2");
+
+        jPanelProjetos.setBackground(new java.awt.Color(204, 204, 255));
+
+        javax.swing.GroupLayout jPanelProjetosLayout = new javax.swing.GroupLayout(jPanelProjetos);
+        jPanelProjetos.setLayout(jPanelProjetosLayout);
+        jPanelProjetosLayout.setHorizontalGroup(
+            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        jPanelProjetosLayout.setVerticalGroup(
+            jPanelProjetosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanelProjetos, "card3");
+
+        jPanelHistoria.setBackground(new java.awt.Color(255, 204, 255));
+
+        javax.swing.GroupLayout jPanelHistoriaLayout = new javax.swing.GroupLayout(jPanelHistoria);
+        jPanelHistoria.setLayout(jPanelHistoriaLayout);
+        jPanelHistoriaLayout.setHorizontalGroup(
+            jPanelHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        jPanelHistoriaLayout.setVerticalGroup(
+            jPanelHistoriaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanelHistoria, "card4");
+
+        jPanelRelatorios.setBackground(new java.awt.Color(255, 255, 204));
+
+        javax.swing.GroupLayout jPanelRelatoriosLayout = new javax.swing.GroupLayout(jPanelRelatorios);
+        jPanelRelatorios.setLayout(jPanelRelatoriosLayout);
+        jPanelRelatoriosLayout.setHorizontalGroup(
+            jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 780, Short.MAX_VALUE)
+        );
+        jPanelRelatoriosLayout.setVerticalGroup(
+            jPanelRelatoriosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 640, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(jPanelRelatorios, "card5");
+
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 780, 640));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -142,6 +207,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanelDashboard;
+    private javax.swing.JPanel jPanelHistoria;
+    private javax.swing.JPanel jPanelProjetos;
+    private javax.swing.JPanel jPanelRelatorios;
     // End of variables declaration//GEN-END:variables
 
 }
