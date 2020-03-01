@@ -47,6 +47,7 @@ public class Principal extends javax.swing.JFrame {
         jLabelDashboard = new javax.swing.JLabel();
         jLabelProjetos = new javax.swing.JLabel();
         jLabelHistorico = new javax.swing.JLabel();
+        jLabeBancas = new javax.swing.JLabel();
         jPanelConteudo = new javax.swing.JPanel();
         jPanelDashboard = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -58,7 +59,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelNovoProjeto = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -92,8 +93,25 @@ public class Principal extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jPanel10 = new javax.swing.JPanel();
+        jPanelBancas = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jSeparator6 = new javax.swing.JSeparator();
+        jPanel12 = new javax.swing.JPanel();
+        jLabelNovaBanca = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -224,7 +242,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelRelatoriosMouseExited(evt);
             }
         });
-        jPanelMenu.add(jLabelRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 250, 50));
+        jPanelMenu.add(jLabelRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 250, 50));
 
         jLabelDashboard.setBackground(new java.awt.Color(0, 51, 102));
         jLabelDashboard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -278,7 +296,25 @@ public class Principal extends javax.swing.JFrame {
                 jLabelHistoricoMouseExited(evt);
             }
         });
-        jPanelMenu.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
+        jPanelMenu.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 250, 50));
+
+        jLabeBancas.setBackground(new java.awt.Color(0, 51, 102));
+        jLabeBancas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabeBancas.setForeground(new java.awt.Color(0, 102, 153));
+        jLabeBancas.setText("  Bancas");
+        jLabeBancas.setOpaque(true);
+        jLabeBancas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabeBancasMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabeBancasMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabeBancasMouseExited(evt);
+            }
+        });
+        jPanelMenu.add(jLabeBancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
 
         jPanel1.add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 620));
 
@@ -331,16 +367,16 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelProjetos.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
 
-        jLabel3.setBackground(new java.awt.Color(0, 51, 102));
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
-        jLabel3.setText("Novo Projeto");
-        jLabel3.setOpaque(true);
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabelNovoProjeto.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelNovoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelNovoProjeto.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelNovoProjeto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelNovoProjeto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
+        jLabelNovoProjeto.setText("Novo Projeto");
+        jLabelNovoProjeto.setOpaque(true);
+        jLabelNovoProjeto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                jLabelNovoProjetoMouseClicked(evt);
             }
         });
 
@@ -350,14 +386,14 @@ public class Principal extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(919, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -523,20 +559,100 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelRelatorios.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
 
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1120, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 90, Short.MAX_VALUE)
-        );
-
+        jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanelRelatorios.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
 
         jPanelConteudo.add(jPanelRelatorios, "relatorios");
+
+        jPanelBancas.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelBancas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel21.setText("Bancas");
+        jPanel11.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 1120, -1));
+
+        jSeparator6.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel11.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 70, 190, 10));
+
+        jPanelBancas.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
+
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelNovaBanca.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelNovaBanca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelNovaBanca.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelNovaBanca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelNovaBanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
+        jLabelNovaBanca.setText("Nova Banca");
+        jLabelNovaBanca.setOpaque(true);
+        jLabelNovaBanca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelNovaBancaMouseClicked(evt);
+            }
+        });
+        jPanel12.add(jLabelNovaBanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 19, 180, 50));
+
+        jPanelBancas.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
+
+        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable2.setForeground(new java.awt.Color(0, 51, 102));
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        jPanel13.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/filter24.png"))); // NOI18N
+        jLabel8.setText("Selecione as opções de pesquisa:");
+        jPanel13.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel23.setText("Orientador");
+        jPanel13.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 190, -1));
+
+        jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel26.setText("GTA");
+        jPanel13.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 190, -1));
+
+        jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel27.setText("Docente");
+        jPanel13.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 190, -1));
+
+        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField5.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel13.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 190, 30));
+
+        jTextField6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField6.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel13.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 190, 30));
+
+        jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField7.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel13.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 190, 30));
+
+        jPanelBancas.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
+
+        jPanelConteudo.add(jPanelBancas, "bancas");
 
         jPanel1.add(jPanelConteudo, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 60, 1120, 620));
 
@@ -619,11 +735,11 @@ public class Principal extends javax.swing.JFrame {
         cl.show(jPanelConteudo, "relatorios");
     }//GEN-LAST:event_jLabelRelatoriosMouseClicked
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+    private void jLabelNovoProjetoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNovoProjetoMouseClicked
         // TODO add your handling code here:
         TelaCadastroProjeto tela = new TelaCadastroProjeto();
         tela.setVisible(rootPaneCheckingEnabled);
-    }//GEN-LAST:event_jLabel3MouseClicked
+    }//GEN-LAST:event_jLabelNovoProjetoMouseClicked
 
     private void jLabelMinhaContaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMinhaContaMouseEntered
         // TODO add your handling code here:
@@ -693,6 +809,28 @@ public class Principal extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jLabelSairMouseClicked
 
+    private void jLabeBancasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabeBancasMouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanelConteudo.getLayout();
+        cl.show(jPanelConteudo, "bancas");
+    }//GEN-LAST:event_jLabeBancasMouseClicked
+
+    private void jLabeBancasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabeBancasMouseEntered
+        // TODO add your handling code here:
+        jLabeBancas.setBackground(new java.awt.Color(0, 0, 51));
+    }//GEN-LAST:event_jLabeBancasMouseEntered
+
+    private void jLabeBancasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabeBancasMouseExited
+        // TODO add your handling code here:
+        jLabeBancas.setBackground(new java.awt.Color(0, 51, 102));
+    }//GEN-LAST:event_jLabeBancasMouseExited
+
+    private void jLabelNovaBancaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNovaBancaMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroBanca tela = new TelaCadastroBanca();
+        tela.setVisible(rootPaneCheckingEnabled);
+    }//GEN-LAST:event_jLabelNovaBancaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -735,6 +873,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBoxRisco1;
     private javax.swing.JComboBox<String> jComboBoxTipoProjeto;
     private javax.swing.JComboBox<String> jComboBoxTipoProjetoEmpresa;
+    private javax.swing.JLabel jLabeBancas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -748,16 +887,22 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelConfiguracoes;
     private javax.swing.JLabel jLabelDashboard;
     private javax.swing.JLabel jLabelHistorico;
     private javax.swing.JLabel jLabelMinhaConta;
+    private javax.swing.JLabel jLabelNovaBanca;
+    private javax.swing.JLabel jLabelNovoProjeto;
     private javax.swing.JLabel jLabelOpcoes;
     private javax.swing.JLabel jLabelProjetos;
     private javax.swing.JLabel jLabelRelatorios;
@@ -765,6 +910,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelUsuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -773,6 +921,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanelBancas;
     private javax.swing.JPanel jPanelCabecalho;
     private javax.swing.JPanel jPanelConteudo;
     private javax.swing.JPanel jPanelDashboard;
@@ -782,15 +931,21 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelProjetos;
     private javax.swing.JPanel jPanelRelatorios;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 
 }
