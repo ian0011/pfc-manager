@@ -5,7 +5,7 @@
  */
 package view;
 
-import dao.UsuarioDAO;
+import dal.UsuarioDAL;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -167,8 +167,8 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
                 u.setPerfil(jComboBoxPerfilUsuario.getSelectedItem().toString());
                 u.setNome(jTextFieldNomeUsuario.getText());
                 
-                UsuarioDAO uDAO = new UsuarioDAO();                
-                uDAO.inserir(u);
+                UsuarioDAL uDAL = new UsuarioDAL();                
+                uDAL.inserir(u);
                 
                 JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
                 

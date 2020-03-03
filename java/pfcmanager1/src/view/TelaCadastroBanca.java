@@ -5,12 +5,12 @@
  */
 package view;
 
-import dao.BancaDAO;
+import dal.BancaDAL;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import model.BancaBean;
+import model.Banca;
 
 /**
  *
@@ -170,15 +170,15 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
         // TODO add your handling code here:
         try{
-            BancaBean banca = new BancaBean();
+            Banca banca = new Banca();
             
             banca.setOrientador(jTextFieldOrientador.getText());
             banca.setGta(jTextFieldGTA.getText());
             banca.setDocente(jTextFieldDocente.getText());
             
-            BancaDAO bancDAO = new BancaDAO();
+            BancaDAL bDAL = new BancaDAL();
             
-            bancDAO.inserir(banca);
+            bDAL.inserir(banca);
             
             JOptionPane.showMessageDialog(this, "Banca cadastrada com sucesso!");
 

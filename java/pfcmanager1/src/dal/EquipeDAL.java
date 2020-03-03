@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dal;
 import model.EquipeBean;
 import java.sql.SQLException;
 
@@ -11,11 +11,11 @@ import java.sql.SQLException;
  *
  * @author Caio
  */
-public class EquipeDAO {
+public class EquipeDAL {
     
     private Database bd;
     
-    public EquipeDAO (){
+    public EquipeDAL (){
         bd = new Database("localhost", "pfcmanager", "root", "root");
     }
 

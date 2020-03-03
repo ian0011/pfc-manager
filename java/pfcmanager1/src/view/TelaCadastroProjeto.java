@@ -5,7 +5,7 @@
  */
 package view;
 
-import dao.ProjetoDAO;
+import dal.ProjetoDAL;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -202,9 +202,9 @@ public class TelaCadastroProjeto extends javax.swing.JFrame {
             p.setRetornoFin(Double.parseDouble(jTextFieldRetornoFin.getText()));
             p.setStatus("pendente");
 
-            ProjetoDAO pDAO = new ProjetoDAO();
+            ProjetoDAL pDAL = new ProjetoDAL();
 
-            pDAO.inserir(p);
+            pDAL.inserir(p);
 
             JOptionPane.showMessageDialog(this, "Projeto cadastrado com sucesso!");
 

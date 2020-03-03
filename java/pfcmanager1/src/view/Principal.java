@@ -5,7 +5,11 @@
  */
 package view;
 
+import dal.BancaDAL;
 import java.awt.CardLayout;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import model.Banca;
 
 /**
  *
@@ -63,7 +67,7 @@ public class Principal extends javax.swing.JFrame {
         jLabelNovoProjeto = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jTableProjetos = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -90,7 +94,7 @@ public class Principal extends javax.swing.JFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jPanel15 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        jTableEquipes = new javax.swing.JTable();
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
@@ -106,9 +110,10 @@ public class Principal extends javax.swing.JFrame {
         jSeparator6 = new javax.swing.JSeparator();
         jPanel12 = new javax.swing.JPanel();
         jLabelNovaBanca = new javax.swing.JLabel();
+        jLabelPesquisarBanca = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        jTableBancas = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
@@ -437,8 +442,8 @@ public class Principal extends javax.swing.JFrame {
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setForeground(new java.awt.Color(0, 51, 102));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTableProjetos.setForeground(new java.awt.Color(0, 51, 102));
+        jTableProjetos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -449,7 +454,7 @@ public class Principal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jTableProjetos);
 
         jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
 
@@ -565,8 +570,8 @@ public class Principal extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(255, 255, 255));
         jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable3.setForeground(new java.awt.Color(0, 51, 102));
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        jTableEquipes.setForeground(new java.awt.Color(0, 51, 102));
+        jTableEquipes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -577,7 +582,7 @@ public class Principal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(jTableEquipes);
 
         jPanel15.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
 
@@ -668,13 +673,27 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel12.add(jLabelNovaBanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 19, 180, 50));
 
+        jLabelPesquisarBanca.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelPesquisarBanca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelPesquisarBanca.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelPesquisarBanca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPesquisarBanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
+        jLabelPesquisarBanca.setText("Pesquisar Banca");
+        jLabelPesquisarBanca.setOpaque(true);
+        jLabelPesquisarBanca.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelPesquisarBancaMouseClicked(evt);
+            }
+        });
+        jPanel12.add(jLabelPesquisarBanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 20, 180, 50));
+
         jPanelBancas.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable2.setForeground(new java.awt.Color(0, 51, 102));
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        jTableBancas.setForeground(new java.awt.Color(0, 51, 102));
+        jTableBancas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -685,7 +704,7 @@ public class Principal extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(jTableBancas);
 
         jPanel13.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
 
@@ -937,6 +956,8 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         CardLayout cl = (CardLayout) jPanelConteudoCentral.getLayout();
         cl.show(jPanelConteudoCentral, "bancas");
+        
+        criarTabelaBanca();
     }//GEN-LAST:event_jLabelBancasMouseClicked
 
     private void jLabelBancasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBancasMouseEntered
@@ -976,6 +997,11 @@ public class Principal extends javax.swing.JFrame {
         TelaCadastroEquipe tela = new TelaCadastroEquipe();
         tela.setVisible(rootPaneCheckingEnabled);
     }//GEN-LAST:event_jLabelNovaBanca1MouseClicked
+
+    private void jLabelPesquisarBancaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPesquisarBancaMouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jLabelPesquisarBancaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1057,6 +1083,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelNovaBanca1;
     private javax.swing.JLabel jLabelNovoProjeto;
     private javax.swing.JLabel jLabelOpcoes;
+    private javax.swing.JLabel jLabelPesquisarBanca;
     private javax.swing.JLabel jLabelProjetos;
     private javax.swing.JLabel jLabelRelatorios;
     private javax.swing.JLabel jLabelSair;
@@ -1097,9 +1124,9 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTableBancas;
+    private javax.swing.JTable jTableEquipes;
+    private javax.swing.JTable jTableProjetos;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;
@@ -1110,5 +1137,26 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+    private void criarTabelaBanca() {
+        DefaultTableModel modeloTabelaBanca = new DefaultTableModel(new String []{"Orientador","GTA","Docente"},0);
+        
+        jTableBancas.setModel(modeloTabelaBanca);
+        
+        BancaDAL bDAL = new BancaDAL();
+            
+        ArrayList<Banca> bancas = bDAL.consultarTodos();
+        
+        for(int i = 0 ; i < bancas.size(); i++){
+        modeloTabelaBanca.addRow(new String[]{
+            bancas.get(i).getId()+"",
+            bancas.get(i).getOrientador(),
+            bancas.get(i).getGta(),
+            bancas.get(i).getDocente(),
+            
+        });
+    }
+        
+    }
 
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dal;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,11 +15,11 @@ import model.Usuario;
  *
  * @author rpmen
  */
-public class UsuarioDAO {
+public class UsuarioDAL {
     
     private Database bd;
 
-    public UsuarioDAO() {
+    public UsuarioDAL() {
         bd = new Database("localhost", "pfcmanager", "root", "root");
     }
 
@@ -37,7 +37,7 @@ public class UsuarioDAO {
                 return null;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(UsuarioDAO.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UsuarioDAL.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             bd.fecharConexao();
         }

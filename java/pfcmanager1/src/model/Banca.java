@@ -9,7 +9,7 @@ package model;
  *
  * @author Caio
  */
-public class BancaBean {
+public class Banca {
     private int id;
     private String orientador;
     private String gta;

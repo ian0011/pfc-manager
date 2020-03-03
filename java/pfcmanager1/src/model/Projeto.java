@@ -19,7 +19,7 @@ public class Projeto {
     private String riscoProjeto;
     private double retornoFin;
     private EquipeBean equipe;
-    private BancaBean banca;
+    private Banca banca;
     private String status;
     private BaremaBean barema;
 
@@ -95,11 +95,11 @@ public class Projeto {
         this.equipe = equipe;
     }
 
-    public BancaBean getBanca() {
+    public Banca getBanca() {
         return banca;
     }
 
-    public void setBanca(BancaBean banca) {
+    public void setBanca(Banca banca) {
         this.banca = banca;
     }
 

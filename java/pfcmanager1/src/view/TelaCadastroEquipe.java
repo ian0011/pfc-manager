@@ -5,12 +5,12 @@
  */
 package view;
 
-import dao.EquipeDAO;
+import dal.EquipeDAL;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import model.BancaBean;
+import model.Banca;
 import model.EquipeBean;
 
 /**
@@ -224,8 +224,8 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
             equip.setAluno2(jTextFieldAluno2.getText());
             equip.setAluno3(jTextFieldAluno3.getText());
             
-            EquipeDAO equipDAO = new EquipeDAO();
-            equipDAO.inserir(equip);
+            EquipeDAL eDAL = new EquipeDAL();
+            eDAL.inserir(equip);
             
             JOptionPane.showMessageDialog(this, "Equipe cadastrada com sucesso!");
             

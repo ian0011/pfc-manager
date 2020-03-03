@@ -5,7 +5,7 @@
  */
 package view;
 
-import dao.UsuarioDAO;
+import dal.UsuarioDAL;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -184,7 +184,7 @@ public class Login extends javax.swing.JFrame {
         }else if(senha.equals("")){
             JOptionPane.showMessageDialog(this, "Senha não informada");
         }else{
-            UsuarioDAO uDAO = new UsuarioDAO();
+            UsuarioDAL uDAO = new UsuarioDAL();
             Usuario u = uDAO.consultarPorEmailSenha(email, senha);
             
             if(u != null){

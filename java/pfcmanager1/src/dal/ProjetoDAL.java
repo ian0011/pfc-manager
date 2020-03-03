@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package dao;
+package dal;
 
 import java.sql.SQLException;
 import model.Projeto;
@@ -12,11 +12,11 @@ import model.Projeto;
  *
  * @author rpmen
  */
-public class ProjetoDAO {
+public class ProjetoDAL {
     
     private Database bd;
     
-    public ProjetoDAO(){
+    public ProjetoDAL(){
         bd = new Database("localhost", "pfcmanager", "root", "root");
     }
     
