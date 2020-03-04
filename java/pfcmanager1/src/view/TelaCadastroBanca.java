@@ -47,6 +47,10 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jTextFieldDocente1 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldDocente2 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -79,12 +83,12 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("GTA:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel4.setText("Docente:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        jLabel4.setText("Cliente:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
         jTextFieldOrientador.setMinimumSize(new java.awt.Dimension(13, 37));
         jTextFieldOrientador.setPreferredSize(new java.awt.Dimension(13, 37));
@@ -93,7 +97,7 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
                 jTextFieldOrientadorActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextFieldOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 380, -1));
+        jPanel2.add(jTextFieldOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 300, 30));
 
         jTextFieldGTA.setMinimumSize(new java.awt.Dimension(13, 37));
         jTextFieldGTA.setPreferredSize(new java.awt.Dimension(13, 37));
@@ -102,7 +106,7 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
                 jTextFieldGTAActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextFieldGTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 380, -1));
+        jPanel2.add(jTextFieldGTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 300, 30));
 
         jTextFieldDocente.setMinimumSize(new java.awt.Dimension(13, 37));
         jTextFieldDocente.setPreferredSize(new java.awt.Dimension(13, 37));
@@ -111,7 +115,7 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
                 jTextFieldDocenteActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextFieldDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 380, -1));
+        jPanel2.add(jTextFieldDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 300, 30));
 
         jPanel3.setMinimumSize(new java.awt.Dimension(657, 57));
         jPanel3.setPreferredSize(new java.awt.Dimension(657, 57));
@@ -145,11 +149,39 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
                 jLabelCloseMouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 480, 540));
+        jTextFieldDocente1.setMinimumSize(new java.awt.Dimension(13, 37));
+        jTextFieldDocente1.setPreferredSize(new java.awt.Dimension(13, 37));
+        jTextFieldDocente1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDocente1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextFieldDocente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 300, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 580));
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel6.setText("Docente:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+
+        jTextFieldDocente2.setMinimumSize(new java.awt.Dimension(13, 37));
+        jTextFieldDocente2.setPreferredSize(new java.awt.Dimension(13, 37));
+        jTextFieldDocente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldDocente2ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextFieldDocente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 300, 30));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel7.setText("Pedagogia:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 680, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 580));
 
         pack();
         setLocationRelativeTo(null);
@@ -199,6 +231,14 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabelCloseMouseClicked
 
+    private void jTextFieldDocente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDocente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDocente1ActionPerformed
+
+    private void jTextFieldDocente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDocente2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldDocente2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -242,10 +282,14 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextFieldDocente;
+    private javax.swing.JTextField jTextFieldDocente1;
+    private javax.swing.JTextField jTextFieldDocente2;
     private javax.swing.JTextField jTextFieldGTA;
     private javax.swing.JTextField jTextFieldOrientador;
     // End of variables declaration//GEN-END:variables

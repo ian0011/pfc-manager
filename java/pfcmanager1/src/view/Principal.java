@@ -121,6 +121,10 @@ public class Principal extends javax.swing.JFrame {
         jTextField5 = new javax.swing.JTextField();
         jTextField6 = new javax.swing.JTextField();
         jTextField7 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jTextField11 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        jTextField12 = new javax.swing.JTextField();
         jPanelHistorico = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jSeparator3 = new javax.swing.JSeparator();
@@ -726,8 +730,8 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel27.setText("Docente:");
-        jPanel13.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 190, -1));
+        jLabel27.setText("Cliente:");
+        jPanel13.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 90, 190, -1));
 
         jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField5.setForeground(new java.awt.Color(0, 51, 102));
@@ -740,6 +744,24 @@ public class Principal extends javax.swing.JFrame {
         jTextField7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField7.setForeground(new java.awt.Color(0, 51, 102));
         jPanel13.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 190, 30));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel30.setText("Docente:");
+        jPanel13.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 190, -1));
+
+        jTextField11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField11.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel13.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 190, 30));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel31.setText("Pedagogia:");
+        jPanel13.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, -1));
+
+        jTextField12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextField12.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel13.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 30));
 
         jPanelBancas.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
 
@@ -1067,6 +1089,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1129,6 +1153,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTable jTableProjetos;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField11;
+    private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField5;
