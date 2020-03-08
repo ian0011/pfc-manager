@@ -168,25 +168,25 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldDocenteActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-        // TODO add your handling code here:
-        try{
-            Banca banca = new Banca();
-            
-            banca.setOrientador(jTextFieldOrientador.getText());
-            banca.setGta(jTextFieldGTA.getText());
-            banca.setDocente(jTextFieldDocente.getText());
-            
-            BancaDAL bDAL = new BancaDAL();
-            
-            bDAL.inserir(banca);
-            
-            JOptionPane.showMessageDialog(this, "Banca cadastrada com sucesso!");
-
-            this.dispose();
-        } catch (SQLException ex) {
-            Logger.getLogger(TelaCadastroBanca.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
-        }
+//        // TODO add your handling code here:
+//        try{
+//            Banca banca = new Banca();
+//            
+//            banca.setOrientador(jTextFieldOrientador.getText());
+//            banca.setGta(jTextFieldGTA.getText());
+//            banca.setDocente(jTextFieldDocente.getText());
+//            
+//            BancaDAL bDAL = new BancaDAL();
+//            
+//            bDAL.inserir(banca);
+//            
+//            JOptionPane.showMessageDialog(this, "Banca cadastrada com sucesso!");
+//
+//            this.dispose();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(TelaCadastroBanca.class.getName()).log(Level.SEVERE, null, ex);
+//            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
+//        }
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed

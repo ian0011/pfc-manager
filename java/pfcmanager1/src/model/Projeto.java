@@ -1,16 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model;
 
-/**
- *
- * @author Caio
- */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
 public class Projeto {
-    private int id;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String cliente;
     private String tipoProjeto;
     private String tipoEmpresa;
@@ -18,106 +24,10 @@ public class Projeto {
     private String macrotema;
     private String riscoProjeto;
     private double retornoFin;
-    private EquipeBean equipe;
-    private Banca banca;
     private String status;
-    private BaremaBean barema;
+    @OneToOne
+    private Equipe equipe;
+    @ManyToOne
+    private Banca banca;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(String cliente) {
-        this.cliente = cliente;
-    }
-
-    public String getTipoProjeto() {
-        return tipoProjeto;
-    }
-
-    public void setTipoProjeto(String tipoProjeto) {
-        this.tipoProjeto = tipoProjeto;
-    }
-
-    public String getTipoEmpresa() {
-        return tipoEmpresa;
-    }
-
-    public void setTipoEmpresa(String tipoEmpresa) {
-        this.tipoEmpresa = tipoEmpresa;
-    }
-
-    public String getTipoNegocio() {
-        return tipoNegocio;
-    }
-
-    public void setTipoNegocio(String tipoNegocio) {
-        this.tipoNegocio = tipoNegocio;
-    }
-
-    public String getMacrotema() {
-        return macrotema;
-    }
-
-    public void setMacrotema(String macrotema) {
-        this.macrotema = macrotema;
-    }
-
-    public String getRiscoProjeto() {
-        return riscoProjeto;
-    }
-
-    public void setRiscoProjeto(String riscoProjeto) {
-        this.riscoProjeto = riscoProjeto;
-    }
-
-    public double getRetornoFin() {
-        return retornoFin;
-    }
-
-    public void setRetornoFin(double retornoFin) {
-        this.retornoFin = retornoFin;
-    }
-
-    public EquipeBean getEquipe() {
-        return equipe;
-    }
-
-    public void setEquipe(EquipeBean equipe) {
-        this.equipe = equipe;
-    }
-
-    public Banca getBanca() {
-        return banca;
-    }
-
-    public void setBanca(Banca banca) {
-        this.banca = banca;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public BaremaBean getBarema() {
-        return barema;
-    }
-
-    public void setBarema(BaremaBean barema) {
-        this.barema = barema;
-    }
-
-    
 }

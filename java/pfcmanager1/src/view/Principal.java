@@ -957,7 +957,7 @@ public class Principal extends javax.swing.JFrame {
         CardLayout cl = (CardLayout) jPanelConteudoCentral.getLayout();
         cl.show(jPanelConteudoCentral, "bancas");
         
-        criarTabelaBanca();
+//        criarTabelaBanca();
     }//GEN-LAST:event_jLabelBancasMouseClicked
 
     private void jLabelBancasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBancasMouseEntered
@@ -1138,25 +1138,25 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
 
-    private void criarTabelaBanca() {
-        DefaultTableModel modeloTabelaBanca = new DefaultTableModel(new String []{"Orientador","GTA","Docente"},0);
-        
-        jTableBancas.setModel(modeloTabelaBanca);
-        
-        BancaDAL bDAL = new BancaDAL();
-            
-        ArrayList<Banca> bancas = bDAL.consultarTodos();
-        
-        for(int i = 0 ; i < bancas.size(); i++){
-        modeloTabelaBanca.addRow(new String[]{
-            bancas.get(i).getId()+"",
-            bancas.get(i).getOrientador(),
-            bancas.get(i).getGta(),
-            bancas.get(i).getDocente(),
-            
-        });
-    }
-        
-    }
+//    private void criarTabelaBanca() {
+//        DefaultTableModel modeloTabelaBanca = new DefaultTableModel(new String []{"Orientador","GTA","Docente"},0);
+//        
+//        jTableBancas.setModel(modeloTabelaBanca);
+//        
+//        BancaDAL bDAL = new BancaDAL();
+//            
+//        ArrayList<Banca> bancas = bDAL.consultarTodos();
+//        
+//        for(int i = 0 ; i < bancas.size(); i++){
+//        modeloTabelaBanca.addRow(new String[]{
+//            bancas.get(i).getId()+"",
+//            bancas.get(i).getOrientador(),
+//            bancas.get(i).getGta(),
+//            bancas.get(i).getDocente(),
+//            
+//        });
+//    }
+//        
+//    }
 
 }
