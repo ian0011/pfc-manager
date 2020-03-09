@@ -1,7 +1,6 @@
 package dal;
 import connection.ConnectionFactory;
 import model.Equipe;
-import java.sql.SQLException;
 import java.util.List;
 import javax.persistence.EntityManager;
 
