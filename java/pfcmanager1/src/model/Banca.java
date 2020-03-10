@@ -1,29 +1,62 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import lombok.Getter;
-import lombok.Setter;
-
-@Entity
-@Getter
-@Setter
+/**
+ *
+ * @author Caio
+ */
 public class Banca {
+    private int id;
+    private String orientador;
+    private String gta;
+    private String docente;
+    private BaremaBean barema;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private String representanteClinete;
-    @ManyToOne
-    private Docente orientador;
-    @ManyToOne
-    private Docente docente;
-    @ManyToOne
-    private Docente gta;
-    @ManyToOne
-    private Docente pedagogia;
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getOrientador() {
+        return orientador;
+    }
+
+    public void setOrientador(String orientador) {
+        this.orientador = orientador;
+    }
+
+    public String getGta() {
+        return gta;
+    }
+
+    public void setGta(String gta) {
+        this.gta = gta;
+    }
+
+    public String getDocente() {
+        return docente;
+    }
+
+    public void setDocente(String docente) {
+        this.docente = docente;
+    }
+
+    public BaremaBean getBarema() {
+        return barema;
+    }
+
+    public void setBarema(BaremaBean barema) {
+        this.barema = barema;
+    }
+
+    
+    
+    
 }

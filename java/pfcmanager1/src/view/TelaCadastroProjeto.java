@@ -189,31 +189,31 @@ public class TelaCadastroProjeto extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldRetornoFinActionPerformed
 
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-//        // TODO add your handling code here:
-//        try {
-//            Projeto p = new Projeto();
-//
-//            p.setCliente(jTextFieldCliente.getText());
-//            p.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
-//            p.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
-//            p.setTipoNegocio(jComboBoxNegocio.getSelectedItem().toString());
-//            p.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
-//            p.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
-//            p.setRetornoFin(Double.parseDouble(jTextFieldRetornoFin.getText()));
-//            p.setStatus("pendente");
-//
-//            ProjetoDAL pDAL = new ProjetoDAL();
-//
-//            pDAL.inserir(p);
-//
-//            JOptionPane.showMessageDialog(this, "Projeto cadastrado com sucesso!");
-//
-//            this.dispose();
-//
-//        } catch (SQLException ex) {
-//            Logger.getLogger(TelaCadastroProjeto.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
-//        }
+        // TODO add your handling code here:
+        try {
+            Projeto p = new Projeto();
+
+            p.setCliente(jTextFieldCliente.getText());
+            p.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
+            p.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
+            p.setTipoNegocio(jComboBoxNegocio.getSelectedItem().toString());
+            p.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
+            p.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
+            p.setRetornoFin(Double.parseDouble(jTextFieldRetornoFin.getText()));
+            p.setStatus("pendente");
+
+            ProjetoDAL pDAL = new ProjetoDAL();
+
+            pDAL.inserir(p);
+
+            JOptionPane.showMessageDialog(this, "Projeto cadastrado com sucesso!");
+
+            this.dispose();
+
+        } catch (SQLException ex) {
+            Logger.getLogger(TelaCadastroProjeto.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
+        }
 
     }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
