@@ -11,7 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import model.Banca;
-import model.EquipeBean;
+import model.Equipe;
 
 /**
  *
@@ -215,25 +215,25 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTurmaActionPerformed
 
     private void JButtonCadastrar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCadastrar
-        // TODO add your handling code here:
-        try{
-            EquipeBean equip = new EquipeBean();
-            
-            equip.setGestor(jTextFieldGestor.getText());
-            equip.setAluno1(jTextFieldAluno1.getText());
-            equip.setAluno2(jTextFieldAluno2.getText());
-            equip.setAluno3(jTextFieldAluno3.getText());
-            
-            EquipeDAL eDAL = new EquipeDAL();
-            eDAL.inserir(equip);
-            
-            JOptionPane.showMessageDialog(this, "Equipe cadastrada com sucesso!");
-            
-            this.dispose();
-        }catch (SQLException ex){
-            Logger.getLogger(TelaCadastroBanca.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
-        }
+//        // TODO add your handling code here:
+//        try{
+//            Equipe equip = new Equipe();
+//            
+//            equip.setGestor(jTextFieldGestor.getText());
+//            equip.setAluno1(jTextFieldAluno1.getText());
+//            equip.setAluno2(jTextFieldAluno2.getText());
+//            equip.setAluno3(jTextFieldAluno3.getText());
+//            
+//            EquipeDAL eDAL = new EquipeDAL();
+//            eDAL.inserir(equip);
+//            
+//            JOptionPane.showMessageDialog(this, "Equipe cadastrada com sucesso!");
+//            
+//            this.dispose();
+//        }catch (SQLException ex){
+//            Logger.getLogger(TelaCadastroBanca.class.getName()).log(Level.SEVERE, null, ex);
+//            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
+//        }
         
         
     }//GEN-LAST:event_JButtonCadastrar
