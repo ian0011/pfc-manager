@@ -88,7 +88,7 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setText("PFC Manager");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 290, -1));
 
-        jLabelEntrar.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelEntrar.setBackground(new java.awt.Color(0, 127, 195));
         jLabelEntrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelEntrar.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEntrar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
