@@ -159,14 +159,14 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
         String confirmSenha = jPasswordFieldConfirmarSenhaUsuario.getText();
         
         if (senha.equals(confirmSenha)) {
-            Usuario u = new Usuario();
-            u.setNome(jTextFieldNomeUsuario.getText());
-            u.setEmail(jTextFieldEmailUsuario.getText());
-            u.setSenha(jPasswordFieldSenhaUsuario.getText());
-            u.setPerfil(jComboBoxPerfilUsuario.getSelectedItem().toString());
+            Usuario usuario = new Usuario();
+            usuario.setNome(jTextFieldNomeUsuario.getText());
+            usuario.setEmail(jTextFieldEmailUsuario.getText());
+            usuario.setSenha(jPasswordFieldSenhaUsuario.getText());
+            usuario.setPerfil(jComboBoxPerfilUsuario.getSelectedItem().toString());
             
             UsuarioDAL dal = new UsuarioDAL();            
-            dal.save(u);
+            dal.save(usuario);
             JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
             this.dispose();
         } else {

@@ -59,6 +59,24 @@ public class Principal extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         jPanel6 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jPanel25 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
         jPanelProjetos = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -126,11 +144,35 @@ public class Principal extends javax.swing.JFrame {
         jSeparator3 = new javax.swing.JSeparator();
         jLabel19 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
         jPanelRelatorios = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jPanel10 = new javax.swing.JPanel();
+        jPanel26 = new javax.swing.JPanel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -215,7 +257,7 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelMain.add(jPanelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 220, 230));
 
-        jPanelCabecalho.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelCabecalho.setBackground(new java.awt.Color(0, 127, 195));
         jPanelCabecalho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -239,18 +281,19 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelMain.add(jPanelCabecalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 60));
 
-        jPanelMenuLateral.setBackground(new java.awt.Color(0, 51, 102));
+        jPanelMenuLateral.setBackground(new java.awt.Color(189, 46, 49));
         jPanelMenuLateral.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo230x71.png"))); // NOI18N
         jLabel1.setOpaque(true);
         jPanelMenuLateral.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 250, 100));
 
-        jLabelRelatorios.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelRelatorios.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelRelatorios.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelRelatorios.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelRelatorios.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelRelatorios.setForeground(new java.awt.Color(255, 255, 255));
         jLabelRelatorios.setText("  Relatórios");
         jLabelRelatorios.setOpaque(true);
         jLabelRelatorios.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -266,9 +309,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelMenuLateral.add(jLabelRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 250, 50));
 
-        jLabelDashboard.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelDashboard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelDashboard.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelDashboard.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelDashboard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelDashboard.setForeground(new java.awt.Color(255, 255, 255));
         jLabelDashboard.setText("  Dashboard");
         jLabelDashboard.setOpaque(true);
         jLabelDashboard.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -284,9 +327,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelMenuLateral.add(jLabelDashboard, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 250, 50));
 
-        jLabelProjetos.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelProjetos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelProjetos.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelProjetos.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelProjetos.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelProjetos.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProjetos.setText("  Projetos");
         jLabelProjetos.setOpaque(true);
         jLabelProjetos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -302,9 +345,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelMenuLateral.add(jLabelProjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 250, 50));
 
-        jLabelHistorico.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelHistorico.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelHistorico.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelHistorico.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelHistorico.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelHistorico.setForeground(new java.awt.Color(255, 255, 255));
         jLabelHistorico.setText("  Histórico");
         jLabelHistorico.setOpaque(true);
         jLabelHistorico.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -320,9 +363,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelMenuLateral.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 250, 50));
 
-        jLabelBancas.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelBancas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelBancas.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelBancas.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelBancas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelBancas.setForeground(new java.awt.Color(255, 255, 255));
         jLabelBancas.setText("  Bancas");
         jLabelBancas.setOpaque(true);
         jLabelBancas.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -338,9 +381,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelMenuLateral.add(jLabelBancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 250, 50));
 
-        jLabelEquipes.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelEquipes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelEquipes.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelEquipes.setBackground(new java.awt.Color(189, 46, 49));
+        jLabelEquipes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelEquipes.setForeground(new java.awt.Color(255, 255, 255));
         jLabelEquipes.setText("  Equipes");
         jLabelEquipes.setOpaque(true);
         jLabelEquipes.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -389,6 +432,92 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelDashboard.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
 
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel19.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, 240, 100));
+
+        jPanel20.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel20.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel40.setText("510");
+        jPanel20.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, 50));
+
+        jLabel41.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel41.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel41.setText("Alunos");
+        jPanel20.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
+
+        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_students_64x64.png"))); // NOI18N
+        jPanel20.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 90, 80));
+
+        jPanel18.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 190, 100));
+
+        jPanel23.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 420, 240));
+
+        jPanel22.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_money_64x64.png"))); // NOI18N
+        jPanel22.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 90, 80));
+
+        jLabel44.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("15.000,00");
+        jPanel22.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 190, 50));
+
+        jLabel45.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel45.setText("R$");
+        jPanel22.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 30, 40));
+
+        jLabel46.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel46.setText("Retorno");
+        jPanel22.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
+
+        jPanel18.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 30, 330, 100));
+
+        jPanel21.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel21.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel37.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel37.setText("Projetos");
+        jPanel21.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
+
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icon_projects_64x64.png"))); // NOI18N
+        jPanel21.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 90, 80));
+
+        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel39.setText("510");
+        jPanel21.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, 50));
+
+        jPanel18.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 190, 100));
+
+        jPanel25.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 160, 240, 240));
+
+        jPanel24.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 160, 240, 240));
+
+        jPanelDashboard.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
+
         jPanelConteudoCentral.add(jPanelDashboard, "dashboard");
 
         jPanelProjetos.setBackground(new java.awt.Color(255, 255, 255));
@@ -407,9 +536,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelProjetos.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
 
-        jLabelNovoProjeto.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelNovoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelNovoProjeto.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelNovoProjeto.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelNovoProjeto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelNovoProjeto.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNovoProjeto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNovoProjeto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
         jLabelNovoProjeto.setText("Novo Projeto");
@@ -456,7 +585,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTableProjetos);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 960, 120));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
@@ -466,7 +595,7 @@ public class Principal extends javax.swing.JFrame {
 
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 210, 60, 30));
+        jPanel4.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 70, 30));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 102));
@@ -476,7 +605,7 @@ public class Principal extends javax.swing.JFrame {
         jComboBoxTipoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jComboBoxTipoProjeto.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxTipoProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Interno", "Externo" }));
-        jPanel4.add(jComboBoxTipoProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 190, 30));
+        jPanel4.add(jComboBoxTipoProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 210, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 51, 102));
@@ -489,8 +618,9 @@ public class Principal extends javax.swing.JFrame {
         jPanel4.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 190, -1));
 
         jComboBoxNegocio.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxNegocio.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxNegocio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escola Técnica", "Serviços Técnicos", "Centro Universitário", "P&D&I", "Comércio", "Indústria", "Social", "CIMATEC", "CIMATEC PARK" }));
-        jPanel4.add(jComboBoxNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 190, 30));
+        jPanel4.add(jComboBoxNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 210, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 51, 102));
@@ -498,19 +628,22 @@ public class Principal extends javax.swing.JFrame {
         jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 190, -1));
 
         jComboBoxTipoProjetoEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jComboBoxTipoProjetoEmpresa.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxTipoProjetoEmpresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pesquisa", "Projeto", "Desenvolvimento de Produto", "Processo" }));
-        jPanel4.add(jComboBoxTipoProjetoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 190, 30));
+        jPanel4.add(jComboBoxTipoProjetoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 120, 210, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 51, 102));
         jLabel12.setText("Tipo de Projeto:");
         jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 190, -1));
 
+        jComboBoxMacrotema.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxMacrotema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sustentabilidade", "Inovação de produto", "Inovação de processo", "Otimização de Processo", "Atualização tecnológica", "Responsabilidade Social", "Construção de protótipos", "Desenvolvimento de ferramentas", "Plantas e modelagens", "Manuten-ção" }));
-        jPanel4.add(jComboBoxMacrotema, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, -1, 30));
+        jPanel4.add(jComboBoxMacrotema, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 210, 210, 30));
 
+        jComboBoxRisco.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxRisco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alto", "Médio", "Baixo" }));
-        jPanel4.add(jComboBoxRisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 190, 30));
+        jPanel4.add(jComboBoxRisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 210, 30));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(0, 51, 102));
@@ -524,12 +657,12 @@ public class Principal extends javax.swing.JFrame {
 
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 190, 30));
+        jPanel4.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 210, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 51, 102));
         jLabel15.setText("Até:");
-        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 30, -1));
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 30, -1));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(0, 51, 102));
@@ -538,15 +671,16 @@ public class Principal extends javax.swing.JFrame {
 
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 60, 30));
+        jPanel4.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, 70, 30));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(0, 51, 102));
         jLabel17.setText("Status");
         jPanel4.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 180, 190, -1));
 
-        jComboBoxRisco1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ativo", "Pendente" }));
-        jPanel4.add(jComboBoxRisco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, 190, 30));
+        jComboBoxRisco1.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxRisco1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ativo", "Pendente", "Concluído", " " }));
+        jPanel4.add(jComboBoxRisco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, 210, 30));
 
         jPanelProjetos.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
 
@@ -584,7 +718,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(jTableEquipes);
 
-        jPanel15.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
+        jPanel15.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 940, 220));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 51, 102));
@@ -623,9 +757,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelNovaBanca1.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelNovaBanca1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelNovaBanca1.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelNovaBanca1.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelNovaBanca1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelNovaBanca1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNovaBanca1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNovaBanca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
         jLabelNovaBanca1.setText("Nova Equipe");
@@ -659,9 +793,9 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelNovaBanca.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelNovaBanca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelNovaBanca.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelNovaBanca.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelNovaBanca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelNovaBanca.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNovaBanca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelNovaBanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
         jLabelNovaBanca.setText("Nova Banca");
@@ -673,9 +807,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel12.add(jLabelNovaBanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 19, 180, 50));
 
-        jLabelPesquisarBanca.setBackground(new java.awt.Color(0, 51, 102));
-        jLabelPesquisarBanca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabelPesquisarBanca.setForeground(new java.awt.Color(0, 102, 153));
+        jLabelPesquisarBanca.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelPesquisarBanca.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelPesquisarBanca.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPesquisarBanca.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabelPesquisarBanca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-24.png"))); // NOI18N
         jLabelPesquisarBanca.setText("Pesquisar Banca");
@@ -706,7 +840,7 @@ public class Principal extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jTableBancas);
 
-        jPanel13.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 940, 120));
+        jPanel13.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 940, 220));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 51, 102));
@@ -774,6 +908,64 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelHistorico.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel17.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("Distribuição por Tipos de Projeto Empresa");
+        jPanel17.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 370, 50));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel30.setText("Distribuição por Macrotema");
+        jPanel17.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 250, 50));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel31.setText("Total de Projetos");
+        jPanel17.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 50, 170, 50));
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel32.setText("Total de Alunos");
+        jPanel17.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 50, 200, 50));
+
+        jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel33.setText("Índice de Conclusão dos Projetos");
+        jPanel17.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 50));
+
+        jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel34.setText("Retorno Financeiro");
+        jPanel17.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 180, 50));
+
+        jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel35.setText("Distribuição por Tipos de Projeto");
+        jPanel17.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 290, 50));
+
+        jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel36.setText("Distribuição por Tipos de Negócio");
+        jPanel17.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 290, 50));
+
+        jPanel1.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
+
+        jPanelHistorico.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
+
         jPanelConteudoCentral.add(jPanelHistorico, "historico");
 
         jPanelRelatorios.setBackground(new java.awt.Color(255, 255, 255));
@@ -794,6 +986,115 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanelRelatorios.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
+
+        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel47.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel47.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel47.setText("Turma");
+        jLabel47.setOpaque(true);
+        jPanel26.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 240, 80));
+
+        jLabel48.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel48.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Curso");
+        jLabel48.setOpaque(true);
+        jPanel26.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 240, 80));
+
+        jLabel49.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel49.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel49.setText("Gestor Área Técnica");
+        jLabel49.setOpaque(true);
+        jPanel26.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 130, 240, 80));
+
+        jLabel50.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel50.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel50.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel50.setText("Área Técnica");
+        jLabel50.setOpaque(true);
+        jPanel26.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 240, 80));
+
+        jLabel51.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("Semestre letivo");
+        jLabel51.setOpaque(true);
+        jPanel26.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 30, 240, 80));
+
+        jLabel52.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel52.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel52.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel52.setText("Modalidade");
+        jLabel52.setOpaque(true);
+        jPanel26.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 30, 240, 80));
+
+        jLabel53.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel53.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("Coordenador de Curso");
+        jLabel53.setOpaque(true);
+        jPanel26.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 240, 80));
+
+        jLabel54.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel54.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel54.setText("Título Projeto");
+        jLabel54.setOpaque(true);
+        jPanel26.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 130, 240, 80));
+
+        jLabel55.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Gestor do Projeto");
+        jLabel55.setOpaque(true);
+        jPanel26.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 240, 80));
+
+        jLabel56.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Cliente");
+        jLabel56.setOpaque(true);
+        jPanel26.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 240, 80));
+
+        jLabel57.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Orientador Técnico");
+        jLabel57.setOpaque(true);
+        jPanel26.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 230, 240, 80));
+
+        jLabel58.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("Macrotema");
+        jLabel58.setOpaque(true);
+        jPanel26.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 240, 80));
+
+        jLabel59.setBackground(new java.awt.Color(0, 127, 195));
+        jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 21)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel59.setText("GTA");
+        jLabel59.setOpaque(true);
+        jPanel26.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 230, 240, 80));
+
+        jPanelRelatorios.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1120, 430));
 
         jPanelConteudoCentral.add(jPanelRelatorios, "relatorios");
 
@@ -816,42 +1117,42 @@ public class Principal extends javax.swing.JFrame {
 
     private void jLabelDashboardMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDashboardMouseEntered
         // TODO add your handling code here:
-        jLabelDashboard.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelDashboard.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelDashboardMouseEntered
 
     private void jLabelDashboardMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDashboardMouseExited
         // TODO add your handling code here:
-        jLabelDashboard.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelDashboard.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelDashboardMouseExited
 
     private void jLabelProjetosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjetosMouseEntered
         // TODO add your handling code here:
-        jLabelProjetos.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelProjetos.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelProjetosMouseEntered
 
     private void jLabelProjetosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjetosMouseExited
         // TODO add your handling code here:
-        jLabelProjetos.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelProjetos.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelProjetosMouseExited
 
     private void jLabelHistoricoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHistoricoMouseEntered
         // TODO add your handling code here:
-        jLabelHistorico.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelHistorico.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelHistoricoMouseEntered
 
     private void jLabelHistoricoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHistoricoMouseExited
         // TODO add your handling code here:
-        jLabelHistorico.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelHistorico.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelHistoricoMouseExited
 
     private void jLabelRelatoriosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRelatoriosMouseEntered
         // TODO add your handling code here:
-        jLabelRelatorios.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelRelatorios.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelRelatoriosMouseEntered
 
     private void jLabelRelatoriosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelRelatoriosMouseExited
         // TODO add your handling code here:
-        jLabelRelatorios.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelRelatorios.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelRelatoriosMouseExited
 
     private void jLabelDashboardMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDashboardMouseClicked
@@ -962,12 +1263,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jLabelBancasMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBancasMouseEntered
         // TODO add your handling code here:
-        jLabelBancas.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelBancas.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelBancasMouseEntered
 
     private void jLabelBancasMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBancasMouseExited
         // TODO add your handling code here:
-        jLabelBancas.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelBancas.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelBancasMouseExited
 
     private void jLabelNovaBancaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNovaBancaMouseClicked
@@ -984,12 +1285,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void jLabelEquipesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEquipesMouseEntered
         // TODO add your handling code here:
-        jLabelEquipes.setBackground(new java.awt.Color(0, 0, 51));
+        jLabelEquipes.setBackground(new java.awt.Color(139, 46, 49));
     }//GEN-LAST:event_jLabelEquipesMouseEntered
 
     private void jLabelEquipesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEquipesMouseExited
         // TODO add your handling code here:
-        jLabelEquipes.setBackground(new java.awt.Color(0, 51, 102));
+        jLabelEquipes.setBackground(new java.awt.Color(189, 46, 48));
     }//GEN-LAST:event_jLabelEquipesMouseExited
 
     private void jLabelNovaBanca1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNovaBanca1MouseClicked
@@ -1067,8 +1368,39 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1088,6 +1420,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelRelatorios;
     private javax.swing.JLabel jLabelSair;
     private javax.swing.JLabel jLabelUsuarios;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
@@ -1095,7 +1428,17 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
