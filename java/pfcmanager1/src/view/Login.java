@@ -7,8 +7,6 @@ package view;
 
 import dal.UsuarioDAL;
 import java.awt.Color;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -158,7 +156,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jLabelEntrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseEntered
         // TODO add your handling code here:
-        jLabelEntrar.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0, 102, 153)));
+        jLabelEntrar.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0,102,153)));
     }//GEN-LAST:event_jLabelEntrarMouseEntered
 
     private void jLabelEntrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseExited
@@ -168,7 +166,7 @@ public class Login extends javax.swing.JFrame {
 
     private void jLabelCloseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseEntered
         // TODO add your handling code here:
-        jLabelClose.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0, 102, 153)));
+        jLabelClose.setBorder(BorderFactory.createLineBorder(new java.awt.Color(0,102,153)));
     }//GEN-LAST:event_jLabelCloseMouseEntered
 
     private void jLabelCloseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseExited
@@ -178,29 +176,25 @@ public class Login extends javax.swing.JFrame {
 
     private void jLabelEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelEntrarMouseClicked
         // TODO add your handling code here:
-        Usuario usuario = new Usuario();
-        usuario.setEmail(jTextFieldEmailLogin.getText());
-        usuario.setSenha(new String(jPasswordFieldSenhaLogin.getPassword()));
-        if (usuario.getEmail().equals("")) {
+        String email = jTextFieldEmailLogin.getText();
+        String senha = new String(jPasswordFieldSenhaLogin.getPassword());
+        
+        if(email.equals("")){
             JOptionPane.showMessageDialog(this, "Email não informado");
-        } else if (usuario.getSenha().equals("")) {
+        }else if(senha.equals("")){
             JOptionPane.showMessageDialog(this, "Senha não informada");
-        } else {
-
-            try {
-                UsuarioDAL dal = new UsuarioDAL();
-                
-                if (dal.ValidarUsuario(usuario)) {
-                    Principal tela = new Principal();
-                    tela.setVisible(rootPaneCheckingEnabled);
-                    this.dispose();
-                } else {
-                    JOptionPane.showMessageDialog(this, "Email e/ou senha incorreto(s)");
-                }
-            } catch (Exception ex) {
-                Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }else{
+            UsuarioDAL uDAO = new UsuarioDAL();
+            Usuario u = uDAO.consultarPorEmailSenha(email, senha);
+            
+            if(u != null){
+                Principal tela = new Principal();
+                tela.setVisible(rootPaneCheckingEnabled);
+                this.dispose();
+            }else{
+                JOptionPane.showMessageDialog(this, "Email e/ou senha incorreto(s)");
             }
-        }
+        }        
     }//GEN-LAST:event_jLabelEntrarMouseClicked
 
     /**

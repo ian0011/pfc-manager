@@ -156,19 +156,28 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
         // TODO add your handling code here:
         String senha = jPasswordFieldSenhaUsuario.getText();
-        String confirmSenha = jPasswordFieldConfirmarSenhaUsuario.getText();
+        String senhaConfirm = jPasswordFieldConfirmarSenhaUsuario.getText();
         
-        if (senha.equals(confirmSenha)) {
-            Usuario u = new Usuario();
-            u.setNome(jTextFieldNomeUsuario.getText());
-            u.setEmail(jTextFieldEmailUsuario.getText());
-            u.setSenha(jPasswordFieldSenhaUsuario.getText());
-            u.setPerfil(jComboBoxPerfilUsuario.getSelectedItem().toString());
-            
-            UsuarioDAL dal = new UsuarioDAL();            
-            dal.save(u);
-            JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
-            this.dispose();
+        if (senha.equals(senhaConfirm)) {
+            try {
+                Usuario u = new Usuario();
+                u.setNome(jTextFieldNomeUsuario.getText());
+                u.setEmail(jTextFieldEmailUsuario.getText());
+                u.setSenha(jPasswordFieldSenhaUsuario.getText());
+                u.setPerfil(jComboBoxPerfilUsuario.getSelectedItem().toString());
+                u.setNome(jTextFieldNomeUsuario.getText());
+                
+                UsuarioDAL uDAL = new UsuarioDAL();                
+                uDAL.inserir(u);
+                
+                JOptionPane.showMessageDialog(this, "Usuário cadastrado com sucesso!");
+                
+                this.dispose();
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(TelaCadastroUsuario.class.getName()).log(Level.SEVERE, null, ex);
+                JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
+            }
         } else {
             JOptionPane.showMessageDialog(this, "Senhas diferentes!");
             System.out.println(jPasswordFieldSenhaUsuario.getText());
