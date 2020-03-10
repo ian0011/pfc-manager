@@ -16,10 +16,10 @@ public class UsuarioTeste {
 
         switch (x) {
             case 0:
-                usuario.setNome("Test");
-                usuario.setEmail("test");
-                usuario.setSenha("test");
-                usuario.setPerfil("test");
+                usuario.setNome("Tes");
+                usuario.setEmail("tes");
+                usuario.setSenha("tes");
+                usuario.setPerfil("tes");
                 dal.save(usuario);
                 break;
             case 1:

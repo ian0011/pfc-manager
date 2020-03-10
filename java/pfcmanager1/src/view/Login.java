@@ -36,9 +36,7 @@ public class Login extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -49,12 +47,11 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabelEntrar = new javax.swing.JLabel();
         jLabelClose = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-
-        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,34 +59,34 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 153));
         jLabel1.setText("Senha:");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 290, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 290, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 102, 153));
         jLabel2.setText("E-mail:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 290, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 290, -1));
 
         jTextFieldEmailLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextFieldEmailLogin.setForeground(new java.awt.Color(0, 102, 153));
         jTextFieldEmailLogin.setBorder(null);
-        jPanel2.add(jTextFieldEmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 290, 30));
+        jPanel2.add(jTextFieldEmailLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 290, 30));
 
         jPasswordFieldSenhaLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordFieldSenhaLogin.setForeground(new java.awt.Color(0, 102, 153));
         jPasswordFieldSenhaLogin.setBorder(null);
-        jPanel2.add(jPasswordFieldSenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 290, 30));
+        jPanel2.add(jPasswordFieldSenhaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 290, 30));
 
         jSeparator1.setForeground(new java.awt.Color(0, 102, 153));
-        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, 290, 10));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 290, 10));
 
         jSeparator2.setForeground(new java.awt.Color(0, 102, 153));
-        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 290, 10));
+        jPanel2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 290, 10));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 153));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("PFC Manager");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 290, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 290, -1));
 
         jLabelEntrar.setBackground(new java.awt.Color(0, 102, 153));
         jLabelEntrar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -110,7 +107,7 @@ public class Login extends javax.swing.JFrame {
                 jLabelEntrarMouseExited(evt);
             }
         });
-        jPanel2.add(jLabelEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 290, 40));
+        jPanel2.add(jLabelEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 290, 40));
 
         jLabelClose.setBackground(new java.awt.Color(255, 255, 255));
         jLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
@@ -128,24 +125,10 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel2.add(jLabelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 0;
-        gridBagConstraints.ipadx = 10;
-        gridBagConstraints.ipady = 20;
-        gridBagConstraints.anchor = java.awt.GridBagConstraints.NORTHWEST;
-        jPanel1.add(jPanel2, gridBagConstraints);
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo230x71.png"))); // NOI18N
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1366, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 768, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 530));
 
         pack();
         setLocationRelativeTo(null);
@@ -242,9 +225,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabelClose;
     private javax.swing.JLabel jLabelEntrar;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordFieldSenhaLogin;
     private javax.swing.JSeparator jSeparator1;
