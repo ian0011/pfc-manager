@@ -4,6 +4,7 @@ import dal.ProjetoDAL;
 import java.util.Scanner;
 import model.Equipe;
 import model.Banca;
+import model.Cliente;
 import model.Projeto;
 
 public class ProjetoTeste {
@@ -14,6 +15,7 @@ public class ProjetoTeste {
 
         Equipe equipe = new Equipe();
         Banca banca = new Banca();
+        Cliente cliente = new Cliente();
         Projeto projeto = new Projeto();
 
         Scanner scan = new Scanner(System.in);  // Create a Scanner object
@@ -23,14 +25,15 @@ public class ProjetoTeste {
             case 0:
                 equipe.setId(4);
                 banca.setId(1);
-                projeto.setCliente("Senai Cimatec");
+                cliente.setId(1);
                 projeto.setTipoProjeto("Interno");
                 projeto.setTipoEmpresa("Desenvolvimento de Produto");
                 projeto.setTipoNegocio("CIMATEC");
                 projeto.setMacrotema("Otimização de Processo");
                 projeto.setRiscoProjeto("Baixo");
-                projeto.setRetornoFin(10000);
+                projeto.setRetornoFin(10000.0);
                 projeto.setStatus("Ativo");
+                projeto.setCliente(cliente);
                 projeto.setEquipe(equipe);
                 projeto.setBanca(banca);
                 dal.save(projeto);
@@ -38,17 +41,18 @@ public class ProjetoTeste {
             case 1:
                 equipe.setId(4);
                 banca.setId(1);
-                projeto.setCliente("Senai Cimatec");
+                cliente.setId(1);
                 projeto.setTipoProjeto("Interno");
                 projeto.setTipoEmpresa("Desenvolvimento de Produto");
                 projeto.setTipoNegocio("CIMATEC");
                 projeto.setMacrotema("Otimização de Processo");
                 projeto.setRiscoProjeto("Baixo");
-                projeto.setRetornoFin(10000);
+                projeto.setRetornoFin(10000.0);
                 projeto.setStatus("Ativo");
+                projeto.setCliente(cliente);
                 projeto.setEquipe(equipe);
                 projeto.setBanca(banca);
-                dal.update(projeto);
+                dal.save(projeto);
                 break;
             case 2:
                 projeto = dal.findById(2);
