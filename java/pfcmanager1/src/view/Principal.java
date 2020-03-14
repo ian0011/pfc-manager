@@ -53,6 +53,8 @@ public class Principal extends javax.swing.JFrame {
         jLabelHistorico = new javax.swing.JLabel();
         jLabelBancas = new javax.swing.JLabel();
         jLabelEquipes = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jComboBoxCadastros = new javax.swing.JComboBox<>();
         jPanelConteudoCentral = new javax.swing.JPanel();
         jPanelDashboard = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -210,6 +212,11 @@ public class Principal extends javax.swing.JFrame {
         jPanelMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanelOpcoes.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelOpcoes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jPanelOpcoesMouseExited(evt);
+            }
+        });
         jPanelOpcoes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabelSair.setBackground(new java.awt.Color(255, 255, 255));
@@ -270,7 +277,7 @@ public class Principal extends javax.swing.JFrame {
         jLabelConfiguracoes.setBackground(new java.awt.Color(255, 255, 255));
         jLabelConfiguracoes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelConfiguracoes.setForeground(new java.awt.Color(0, 51, 102));
-        jLabelConfiguracoes.setText("   Configurações");
+        jLabelConfiguracoes.setText("   Cadastros");
         jLabelConfiguracoes.setOpaque(true);
         jLabelConfiguracoes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -285,7 +292,7 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanelOpcoes.add(jLabelConfiguracoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 220, 50));
 
-        jPanelMain.add(jPanelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 220, 230));
+        jPanelMain.add(jPanelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 220, 220));
 
         jPanelCabecalho.setBackground(new java.awt.Color(0, 127, 195));
         jPanelCabecalho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -428,6 +435,17 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanelMenuLateral.add(jLabelEquipes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
+
+        jLabel78.setBackground(new java.awt.Color(189, 46, 49));
+        jLabel78.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel78.setText("  Cadastros");
+        jLabel78.setOpaque(true);
+        jPanelMenuLateral.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
+
+        jComboBoxCadastros.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBoxCadastros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanelMenuLateral.add(jComboBoxCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
 
         jPanelMain.add(jPanelMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 620));
 
@@ -1492,6 +1510,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         TelaCadastroUsuario tela = new TelaCadastroUsuario();
         tela.setVisible(true);
+        jPanelOpcoes.setVisible(false);
     }//GEN-LAST:event_jLabelUsuariosMouseClicked
 
     private void jLabelConfiguracoesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelConfiguracoesMouseClicked
@@ -1554,6 +1573,10 @@ public class Principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jLabelPesquisarBancaMouseClicked
 
+    private void jPanelOpcoesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanelOpcoesMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPanelOpcoesMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -1590,6 +1613,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBoxCadastros;
     private javax.swing.JComboBox<String> jComboBoxMacrotema;
     private javax.swing.JComboBox<String> jComboBoxNegocio;
     private javax.swing.JComboBox<String> jComboBoxRisco;
@@ -1671,6 +1695,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelBancas;

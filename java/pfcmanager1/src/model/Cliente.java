@@ -10,14 +10,19 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-
 public class Cliente {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String nome;
-    private String telefone;
-    private String bairro;
-    
+    private String razaoSocial;
+    private String nomeFantasia;
+    private String endereço;
+    private String nomeRepresentante;
+    private String emailRepresentante;
+    private String telefoneRepresentante;
+    private String problema;
+    private String solucaoDesejada;
+    private String resultadoEsperado;
+
 }
