@@ -301,7 +301,7 @@ public class Principal extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("PFC Manager");
-        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 1370, -1));
+        jPanelCabecalho.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 10, 250, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -1433,6 +1433,7 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
         CardLayout cl = (CardLayout) jPanelConteudoCentral.getLayout();
         cl.show(jPanelConteudoCentral, "projetos");
+        jPanelOpcoes.setVisible(false);
     }//GEN-LAST:event_jLabelProjetosMouseClicked
 
     private void jLabelHistoricoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelHistoricoMouseClicked

@@ -29,8 +29,8 @@ public class DocenteTeste {
                 System.out.println("Nome: " + docente.getNome());
                 break;
             case 3:
-                for (Docente docen : dal.findAll()) {
-                    System.out.println("Nome: " + docen.getNome());
+                for (Docente d : dal.findAll()) {
+                    System.out.println("Nome: " + d.getNome());
                 }
                 break;
             case 4:

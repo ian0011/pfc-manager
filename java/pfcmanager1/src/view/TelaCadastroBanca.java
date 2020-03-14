@@ -1,26 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import dal.BancaDAL;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import dal.DocenteDAL;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 import model.Banca;
+import model.Docente;
 
-/**
- *
- * @author Caio
- */
 public class TelaCadastroBanca extends javax.swing.JFrame {
 
-    /**
-     * Creates new form TelaCadastroBanca
-     */
     public TelaCadastroBanca() {
         initComponents();
     }
@@ -40,17 +28,27 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextFieldOrientador = new javax.swing.JTextField();
-        jTextFieldGTA = new javax.swing.JTextField();
-        jTextFieldDocente = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTextFieldRepCliente = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBoxOrientador = new javax.swing.JComboBox<>();
+        jComboBoxPedagogia = new javax.swing.JComboBox<>();
+        jComboBoxGta = new javax.swing.JComboBox<>();
+        jComboBoxDocente = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
@@ -74,44 +72,17 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 102));
         jLabel2.setText("Orientador Técnico:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel3.setText("GTA:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        jLabel3.setText("GPE");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
         jLabel4.setText("Docente:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
-
-        jTextFieldOrientador.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldOrientador.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldOrientador.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldOrientadorActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 380, -1));
-
-        jTextFieldGTA.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldGTA.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldGTA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldGTAActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldGTA, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 380, -1));
-
-        jTextFieldDocente.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldDocente.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldDocente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldDocenteActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 380, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         jPanel3.setMinimumSize(new java.awt.Dimension(657, 57));
         jPanel3.setPreferredSize(new java.awt.Dimension(657, 57));
@@ -147,6 +118,39 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 10, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel6.setText("Representante do Cliente:");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 210, -1));
+
+        jTextFieldRepCliente.setMinimumSize(new java.awt.Dimension(13, 37));
+        jTextFieldRepCliente.setPreferredSize(new java.awt.Dimension(13, 37));
+        jTextFieldRepCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldRepClienteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jTextFieldRepCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 380, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel7.setText("Pedagogia:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 210, -1));
+
+        jComboBoxOrientador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxOrientadorActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jComboBoxOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 150, -1));
+
+        jPanel2.add(jComboBoxPedagogia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 150, -1));
+
+        jPanel2.add(jComboBoxGta, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 150, -1));
+
+        jPanel2.add(jComboBoxDocente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 150, -1));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 140, -1));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 480, 540));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 580));
@@ -155,20 +159,30 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldOrientadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldOrientadorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldOrientadorActionPerformed
-
-    private void jTextFieldGTAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldGTAActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldGTAActionPerformed
-
-    private void jTextFieldDocenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldDocenteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldDocenteActionPerformed
-
     private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
 //        // TODO add your handling code here:
+
+        BancaDAL dal = new BancaDAL();
+        Banca banca = new Banca();
+
+        Docente docente = new Docente();
+        Docente gta = new Docente();
+        Docente orientador = new Docente();
+        Docente pedagogia = new Docente();
+
+        docente = (Docente) jComboBoxDocente.getSelectedItem();
+        gta = (Docente) jComboBoxGta.getSelectedItem();
+        orientador = (Docente) jComboBoxOrientador.getSelectedItem();
+        pedagogia = (Docente) jComboBoxPedagogia.getSelectedItem();
+
+        banca.setRepresentanteClinete(jTextFieldRepCliente.getText());
+        banca.setDocente(docente);
+        banca.setGta(gta);
+        banca.setOrientador(orientador);
+        banca.setPedagogia(pedagogia);
+
+        dal.save(banca);
+
 //        try{
 //            Banca banca = new Banca();
 //            
@@ -198,6 +212,59 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jLabelCloseMouseClicked
+
+    private void jTextFieldRepClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldRepClienteActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextFieldRepClienteActionPerformed
+
+    private void jComboBoxOrientadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxOrientadorActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jComboBoxOrientadorActionPerformed
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        DocenteDAL dal = new DocenteDAL();
+        List<Docente> docentes = dal.findAll();
+
+        for (Docente d : docentes) {
+            jComboBoxDocente.addItem(d);
+        }
+        for (Docente d : docentes) {
+            jComboBoxGta.addItem(d);
+        }
+        for (Docente d : docentes) {
+            jComboBoxOrientador.addItem(d);
+        }
+        for (Docente d : docentes) {
+            jComboBoxPedagogia.addItem(d);
+        }
+
+//        DefaultComboBoxModel modelOrientador = (DefaultComboBoxModel) jComboBoxOrientador.getModel();
+//        modelOrientador.removeAllElements();
+//        for (Docente orientadores : docentes) {
+//            modelOrientador.addElement(orientadores.getNome());
+//        }
+//
+//        DefaultComboBoxModel modelGta = (DefaultComboBoxModel) jComboBoxGpe.getModel();
+//        modelGta.removeAllElements();
+//        for (Docente gtas : docentes) {
+//            modelGta.addElement(gtas.getNome());
+//        }
+//
+//        DefaultComboBoxModel modelDocente = (DefaultComboBoxModel) jComboBoxDocente.getModel();
+//        modelDocente.removeAllElements();
+//        for (Docente docente : docentes) {
+//            modelDocente.addElement(docente.getNome());
+//        }
+//
+//        DefaultComboBoxModel modelPedagogia = (DefaultComboBoxModel) jComboBoxPedagogia.getModel();
+//        modelPedagogia.removeAllElements();
+//        for (Docente pedagogias : docentes) {
+//            modelPedagogia.addElement(pedagogias.getNome());
+//        }
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments
@@ -237,16 +304,21 @@ public class TelaCadastroBanca extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<Object> jComboBoxDocente;
+    private javax.swing.JComboBox<Object> jComboBoxGta;
+    private javax.swing.JComboBox<Object> jComboBoxOrientador;
+    private javax.swing.JComboBox<Object> jComboBoxPedagogia;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldDocente;
-    private javax.swing.JTextField jTextFieldGTA;
-    private javax.swing.JTextField jTextFieldOrientador;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextFieldRepCliente;
     // End of variables declaration//GEN-END:variables
 }
