@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import dal.AlunoDAL;
@@ -13,10 +8,6 @@ import model.Aluno;
 import model.Docente;
 import model.Equipe;
 
-/**
- *
- * @author Caio
- */
 public class TelaCadastroEquipe extends javax.swing.JFrame {
 
     /**
@@ -82,22 +73,22 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         jLabel1.setMaximumSize(new java.awt.Dimension(150, 32));
         jLabel1.setMinimumSize(new java.awt.Dimension(150, 32));
         jLabel1.setPreferredSize(new java.awt.Dimension(150, 32));
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 102));
         jLabel2.setText("Gestor do projeto:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("Aluno 1:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
         jLabel4.setText("Aluno 2:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         jPanel3.setMinimumSize(new java.awt.Dimension(657, 57));
         jPanel3.setPreferredSize(new java.awt.Dimension(657, 57));
@@ -136,38 +127,50 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 51, 102));
         jLabel7.setText("GPE:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
-        jPanel2.add(jComboBoxAluno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 300, -1));
+        jComboBoxAluno3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxAluno3.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jComboBoxAluno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 300, 30));
 
+        jComboBoxGestor.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxGestor.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxGestor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxGestorActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBoxGestor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 300, -1));
+        jPanel2.add(jComboBoxGestor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 300, 30));
 
-        jPanel2.add(jComboBoxAluno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 300, -1));
+        jComboBoxAluno1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxAluno1.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jComboBoxAluno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 300, 30));
 
-        jPanel2.add(jComboBoxAluno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 300, -1));
+        jComboBoxAluno2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxAluno2.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jComboBoxAluno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 300, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 51, 102));
         jLabel9.setText("Aluno 3:");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 51, 102));
         jLabel10.setText("Orientador Técnico:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
 
-        jPanel2.add(jComboBoxGpe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 300, -1));
+        jComboBoxGpe.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxGpe.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jComboBoxGpe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 300, 30));
 
-        jPanel2.add(jComboBoxOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 300, -1));
+        jComboBoxOrientador.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxOrientador.setForeground(new java.awt.Color(0, 51, 102));
+        jPanel2.add(jComboBoxOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, 300, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 480, 650));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 760));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 690));
 
         pack();
         setLocationRelativeTo(null);
@@ -182,17 +185,14 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         EquipeDAL equipeDAL = new EquipeDAL();
         
         Equipe equipe = new Equipe();
-        Docente orientador = new Docente();
-        Docente gpe = new Docente();
 
         equipe.setGestor((Aluno) jComboBoxGestor.getSelectedItem());
         equipe.setAluno1((Aluno) jComboBoxAluno1.getSelectedItem());
         equipe.setAluno2((Aluno) jComboBoxAluno2.getSelectedItem());
         equipe.setAluno3((Aluno) jComboBoxAluno3.getSelectedItem());
-        orientador = (Docente) jComboBoxOrientador.getSelectedItem();
-        equipe.setOrientador(orientador);
-        gpe = (Docente) jComboBoxGpe.getSelectedItem();
-        equipe.setGpe(gpe);
+        equipe.setOrientador( (Docente)jComboBoxOrientador.getSelectedItem());
+        equipe.setGpe((Docente)jComboBoxGpe.getSelectedItem());
+        
         equipeDAL.save(equipe);
 
     }//GEN-LAST:event_JButtonCadastrar
@@ -205,8 +205,9 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         AlunoDAL alunoDal = new AlunoDAL();
-        List<Aluno> alunos = alunoDal.findAll();
         DocenteDAL docenteDal = new DocenteDAL();
+        
+        List<Aluno> alunos = alunoDal.findAll();
         List<Docente> docentes = docenteDal.findAll();
 
         for (Aluno a : alunos) {
