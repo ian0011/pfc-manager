@@ -64,54 +64,54 @@ public class TelaCadastroUsuario extends javax.swing.JFrame {
 
         jPasswordFieldConfirmarSenhaUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordFieldConfirmarSenhaUsuario.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel2.add(jPasswordFieldConfirmarSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 300, -1));
+        jPanel2.add(jPasswordFieldConfirmarSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 280, -1));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 51, 102));
         jLabel6.setText("Cofirme a senha:");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, -1, -1));
 
         jPasswordFieldSenhaUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordFieldSenhaUsuario.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel2.add(jPasswordFieldSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 300, -1));
+        jPanel2.add(jPasswordFieldSenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 280, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 51, 102));
         jLabel5.setText("Senha:");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
 
         jTextFieldEmailUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextFieldEmailUsuario.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel2.add(jTextFieldEmailUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 300, -1));
+        jPanel2.add(jTextFieldEmailUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 280, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
         jLabel4.setText("Email:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         jTextFieldNomeUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextFieldNomeUsuario.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel2.add(jTextFieldNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 300, -1));
+        jPanel2.add(jTextFieldNomeUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 280, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("Nome:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jComboBoxPerfilUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jComboBoxPerfilUsuario.setForeground(new java.awt.Color(0, 51, 102));
         jComboBoxPerfilUsuario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "GTA", "Visitante" }));
-        jPanel2.add(jComboBoxPerfilUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 300, -1));
+        jPanel2.add(jComboBoxPerfilUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 280, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 102));
         jLabel2.setText("Perfil:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 102));
         jLabel1.setText("Novo Usuário");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
