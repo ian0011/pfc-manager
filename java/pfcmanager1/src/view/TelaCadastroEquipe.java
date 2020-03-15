@@ -57,7 +57,7 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 127, 195));
         jPanel1.setMinimumSize(new java.awt.Dimension(700, 560));
         jPanel1.setPreferredSize(new java.awt.Dimension(700, 560));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

@@ -73,7 +73,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel1.setBackground(new java.awt.Color(0, 127, 195));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -114,7 +114,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jTextFieldEndereco.setForeground(new java.awt.Color(0, 51, 102));
         jPanelCadastroCliente1.add(jTextFieldEndereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 550, -1));
 
-        jLabelProximo1.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelProximo1.setBackground(new java.awt.Color(0, 127, 195));
         jLabelProximo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelProximo1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProximo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -172,7 +172,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         jLabel11.setText("Nome do Representante:");
         jPanelCadastroCliente2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
-        jLabelProximo2.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelProximo2.setBackground(new java.awt.Color(0, 127, 195));
         jLabelProximo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelProximo2.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProximo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -185,7 +185,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         });
         jPanelCadastroCliente2.add(jLabelProximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 190, 60));
 
-        jLabelVoltar1.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelVoltar1.setBackground(new java.awt.Color(0, 127, 195));
         jLabelVoltar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelVoltar1.setForeground(new java.awt.Color(255, 255, 255));
         jLabelVoltar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -249,7 +249,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jPanelCadastroCliente3.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 550, 70));
 
-        jLabelSalvar.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelSalvar.setBackground(new java.awt.Color(0, 127, 195));
         jLabelSalvar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelSalvar.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSalvar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -262,7 +262,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         });
         jPanelCadastroCliente3.add(jLabelSalvar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 190, 60));
 
-        jLabelVoltar2.setBackground(new java.awt.Color(0, 102, 153));
+        jLabelVoltar2.setBackground(new java.awt.Color(0, 127, 195));
         jLabelVoltar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabelVoltar2.setForeground(new java.awt.Color(255, 255, 255));
         jLabelVoltar2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
