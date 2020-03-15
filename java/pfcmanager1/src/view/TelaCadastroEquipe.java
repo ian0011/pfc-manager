@@ -5,12 +5,12 @@
  */
 package view;
 
+import dal.AlunoDAL;
+import dal.DocenteDAL;
 import dal.EquipeDAL;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
-import model.Banca;
+import java.util.List;
+import model.Aluno;
+import model.Docente;
 import model.Equipe;
 
 /**
@@ -42,21 +42,28 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
+        jButtonCadastrarEquipe = new javax.swing.JButton();
         jButtonCancelar = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextFieldGestor = new javax.swing.JTextField();
-        jTextFieldAluno1 = new javax.swing.JTextField();
-        jTextFieldAluno2 = new javax.swing.JTextField();
-        jTextFieldAluno3 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldTurma = new javax.swing.JTextField();
+        jComboBoxAluno3 = new javax.swing.JComboBox<>();
+        jComboBoxGestor = new javax.swing.JComboBox<>();
+        jComboBoxAluno1 = new javax.swing.JComboBox<>();
+        jComboBoxAluno2 = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jComboBoxGpe = new javax.swing.JComboBox<>();
+        jComboBoxOrientador = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setMinimumSize(new java.awt.Dimension(520, 580));
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 153));
@@ -80,31 +87,31 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 51, 102));
         jLabel2.setText("Gestor do projeto:");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 51, 102));
         jLabel3.setText("Aluno 1:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
         jLabel4.setText("Aluno 2:");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
 
         jPanel3.setMinimumSize(new java.awt.Dimension(657, 57));
         jPanel3.setPreferredSize(new java.awt.Dimension(657, 57));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 51, 102));
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCadastrarEquipe.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonCadastrarEquipe.setForeground(new java.awt.Color(0, 51, 102));
+        jButtonCadastrarEquipe.setText("Cadastrar");
+        jButtonCadastrarEquipe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 JButtonCadastrar(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 120, -1));
+        jPanel3.add(jButtonCadastrarEquipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 120, -1));
 
         jButtonCancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButtonCancelar.setForeground(new java.awt.Color(0, 51, 102));
@@ -114,9 +121,9 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
                 JButtonCancelar(evt);
             }
         });
-        jPanel3.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 120, -1));
+        jPanel3.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 120, -1));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 480, 70));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 580, 480, 70));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -128,62 +135,39 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel7.setText("Aluno 3:");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
+        jLabel7.setText("GPE:");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
 
-        jTextFieldGestor.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldGestor.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldGestor.addActionListener(new java.awt.event.ActionListener() {
+        jPanel2.add(jComboBoxAluno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 300, -1));
+
+        jComboBoxGestor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldGestorActionPerformed(evt);
+                jComboBoxGestorActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextFieldGestor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 380, -1));
+        jPanel2.add(jComboBoxGestor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 300, -1));
 
-        jTextFieldAluno1.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno1.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAluno1ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldAluno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 380, -1));
+        jPanel2.add(jComboBoxAluno1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 300, -1));
 
-        jTextFieldAluno2.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno2.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAluno2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldAluno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 380, -1));
+        jPanel2.add(jComboBoxAluno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 300, -1));
 
-        jTextFieldAluno3.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno3.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldAluno3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldAluno3ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldAluno3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 380, -1));
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel9.setText("Aluno 3:");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel8.setText("Turma:");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel10.setText("Orientador Técnico:");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, -1, -1));
 
-        jTextFieldTurma.setMinimumSize(new java.awt.Dimension(13, 37));
-        jTextFieldTurma.setPreferredSize(new java.awt.Dimension(13, 37));
-        jTextFieldTurma.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldTurmaActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextFieldTurma, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 120, 30));
+        jPanel2.add(jComboBoxGpe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 300, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 480, 540));
+        jPanel2.add(jComboBoxOrientador, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, 300, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 580));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 480, 650));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 760));
 
         pack();
         setLocationRelativeTo(null);
@@ -194,54 +178,67 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel5jLabelCloseMouseClicked
 
-    private void jTextFieldGestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldGestorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldGestorActionPerformed
-
-    private void jTextFieldAluno1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAluno1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAluno1ActionPerformed
-
-    private void jTextFieldAluno2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAluno2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAluno2ActionPerformed
-
-    private void jTextFieldAluno3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAluno3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldAluno3ActionPerformed
-
-    private void jTextFieldTurmaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldTurmaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldTurmaActionPerformed
-
     private void JButtonCadastrar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCadastrar
-//        // TODO add your handling code here:
-//        try{
-//            Equipe equip = new Equipe();
-//            
-//            equip.setGestor(jTextFieldGestor.getText());
-//            equip.setAluno1(jTextFieldAluno1.getText());
-//            equip.setAluno2(jTextFieldAluno2.getText());
-//            equip.setAluno3(jTextFieldAluno3.getText());
-//            
-//            EquipeDAL eDAL = new EquipeDAL();
-//            eDAL.inserir(equip);
-//            
-//            JOptionPane.showMessageDialog(this, "Equipe cadastrada com sucesso!");
-//            
-//            this.dispose();
-//        }catch (SQLException ex){
-//            Logger.getLogger(TelaCadastroBanca.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
-//        }
+        EquipeDAL equipeDAL = new EquipeDAL();
         
-        
+        Equipe equipe = new Equipe();
+        Docente orientador = new Docente();
+        Docente gpe = new Docente();
+
+        equipe.setGestor((Aluno) jComboBoxGestor.getSelectedItem());
+        equipe.setAluno1((Aluno) jComboBoxAluno1.getSelectedItem());
+        equipe.setAluno2((Aluno) jComboBoxAluno2.getSelectedItem());
+        equipe.setAluno3((Aluno) jComboBoxAluno3.getSelectedItem());
+        orientador = (Docente) jComboBoxOrientador.getSelectedItem();
+        equipe.setOrientador(orientador);
+        gpe = (Docente) jComboBoxGpe.getSelectedItem();
+        equipe.setGpe(gpe);
+        equipeDAL.save(equipe);
+
     }//GEN-LAST:event_JButtonCadastrar
 
     private void JButtonCancelar(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JButtonCancelar
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_JButtonCancelar
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+        AlunoDAL alunoDal = new AlunoDAL();
+        List<Aluno> alunos = alunoDal.findAll();
+        DocenteDAL docenteDal = new DocenteDAL();
+        List<Docente> docentes = docenteDal.findAll();
+
+        for (Aluno a : alunos) {
+            jComboBoxGestor.addItem(a);
+        }
+
+        for (Aluno a : alunos) {
+            jComboBoxAluno1.addItem(a);
+        }
+        for (Aluno a : alunos) {
+            jComboBoxAluno2.addItem(a);
+        }
+
+        for (Aluno a : alunos) {
+            jComboBoxAluno3.addItem(a);
+        }
+
+        for (Docente d : docentes) {
+            jComboBoxOrientador.addItem(d);
+        }
+
+        for (Docente d : docentes) {
+            jComboBoxGpe.addItem(d);
+        }
+
+
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jComboBoxGestorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxGestorActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jComboBoxGestorActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,22 +276,24 @@ public class TelaCadastroEquipe extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonCadastrarEquipe;
     private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JComboBox<Object> jComboBoxAluno1;
+    private javax.swing.JComboBox<Object> jComboBoxAluno2;
+    private javax.swing.JComboBox<Object> jComboBoxAluno3;
+    private javax.swing.JComboBox<Object> jComboBoxGestor;
+    private javax.swing.JComboBox<Object> jComboBoxGpe;
+    private javax.swing.JComboBox<Object> jComboBoxOrientador;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldAluno1;
-    private javax.swing.JTextField jTextFieldAluno2;
-    private javax.swing.JTextField jTextFieldAluno3;
-    private javax.swing.JTextField jTextFieldGestor;
-    private javax.swing.JTextField jTextFieldTurma;
     // End of variables declaration//GEN-END:variables
 }
