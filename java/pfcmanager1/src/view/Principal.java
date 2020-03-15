@@ -23,6 +23,8 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
         jPanelOpcoes.setVisible(false);
+        jPanelMenuCadastros.setVisible(false);
+        jPanelMenuCadastrosProjetos.setVisible(false);
     }
 
     /**
@@ -41,10 +43,23 @@ public class Principal extends javax.swing.JFrame {
         jLabelUsuarios = new javax.swing.JLabel();
         jSeparator5 = new javax.swing.JSeparator();
         jLabelConfiguracoes = new javax.swing.JLabel();
+        jPanelMenuCadastros = new javax.swing.JPanel();
+        jLabelClientes = new javax.swing.JLabel();
+        jLabelUsuario = new javax.swing.JLabel();
+        jLabelAlunos = new javax.swing.JLabel();
+        jLabelCursos = new javax.swing.JLabel();
+        jLabelDocentes = new javax.swing.JLabel();
+        jLabelProjeto = new javax.swing.JLabel();
+        jPanelMenuCadastrosProjetos = new javax.swing.JPanel();
+        jLabelTiposProjeto = new javax.swing.JLabel();
+        jLabelTiposProjetoEmpresa = new javax.swing.JLabel();
+        jLabelTiposNegocio = new javax.swing.JLabel();
+        jLabelMacrotema = new javax.swing.JLabel();
         jPanelCabecalho = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabelOpcoes = new javax.swing.JLabel();
+        jLabelMenuCadastros = new javax.swing.JLabel();
         jPanelMenuLateral = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabelRelatorios = new javax.swing.JLabel();
@@ -53,8 +68,6 @@ public class Principal extends javax.swing.JFrame {
         jLabelHistorico = new javax.swing.JLabel();
         jLabelBancas = new javax.swing.JLabel();
         jLabelEquipes = new javax.swing.JLabel();
-        jLabel78 = new javax.swing.JLabel();
-        jComboBoxCadastros = new javax.swing.JComboBox<>();
         jPanelConteudoCentral = new javax.swing.JPanel();
         jPanelDashboard = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -294,6 +307,191 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelMain.add(jPanelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 50, 220, 220));
 
+        jPanelMenuCadastros.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelClientes.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelClientes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelClientes.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelClientes.setText("   Clientes");
+        jLabelClientes.setOpaque(true);
+        jLabelClientes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClientesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelClientesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelClientesMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 200, 60));
+
+        jLabelUsuario.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelUsuario.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelUsuario.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelUsuario.setText("   Usuários");
+        jLabelUsuario.setOpaque(true);
+        jLabelUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelUsuarioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelUsuarioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelUsuarioMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 60));
+
+        jLabelAlunos.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelAlunos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelAlunos.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelAlunos.setText("   Alunos");
+        jLabelAlunos.setOpaque(true);
+        jLabelAlunos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelAlunosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelAlunosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelAlunosMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelAlunos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 200, 60));
+
+        jLabelCursos.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelCursos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelCursos.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelCursos.setText("   Cursos");
+        jLabelCursos.setOpaque(true);
+        jLabelCursos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelCursosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelCursosMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelCursosMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelCursos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 200, 60));
+
+        jLabelDocentes.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelDocentes.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelDocentes.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelDocentes.setText("   Docentes");
+        jLabelDocentes.setOpaque(true);
+        jLabelDocentes.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelDocentesMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelDocentesMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelDocentesMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelDocentes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 200, 60));
+
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProjeto.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelProjeto.setText("   Projeto");
+        jLabelProjeto.setOpaque(true);
+        jLabelProjeto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelProjetoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelProjetoMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastros.add(jLabelProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 200, 60));
+
+        jPanelMain.add(jPanelMenuCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 50, 200, 360));
+
+        jPanelMenuCadastrosProjetos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelTiposProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelTiposProjeto.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelTiposProjeto.setText("  Tipos de Projeto");
+        jLabelTiposProjeto.setOpaque(true);
+        jLabelTiposProjeto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastrosProjetos.add(jLabelTiposProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, 60));
+
+        jLabelTiposProjetoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposProjetoEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelTiposProjetoEmpresa.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelTiposProjetoEmpresa.setText("  Tipos de Projeto Empresa");
+        jLabelTiposProjetoEmpresa.setOpaque(true);
+        jLabelTiposProjetoEmpresa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoEmpresaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoEmpresaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelTiposProjetoEmpresaMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastrosProjetos.add(jLabelTiposProjetoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 220, 60));
+
+        jLabelTiposNegocio.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposNegocio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelTiposNegocio.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelTiposNegocio.setText("  Tipos de Negócio");
+        jLabelTiposNegocio.setOpaque(true);
+        jLabelTiposNegocio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelTiposNegocioMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelTiposNegocioMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelTiposNegocioMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastrosProjetos.add(jLabelTiposNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 60));
+
+        jLabelMacrotema.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelMacrotema.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelMacrotema.setForeground(new java.awt.Color(0, 51, 102));
+        jLabelMacrotema.setText("  Macrotemas");
+        jLabelMacrotema.setOpaque(true);
+        jLabelMacrotema.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelMacrotemaMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabelMacrotemaMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabelMacrotemaMouseExited(evt);
+            }
+        });
+        jPanelMenuCadastrosProjetos.add(jLabelMacrotema, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 220, 60));
+
+        jPanelMain.add(jPanelMenuCadastrosProjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 220, 240));
+
         jPanelCabecalho.setBackground(new java.awt.Color(0, 127, 195));
         jPanelCabecalho.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -315,6 +513,18 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanelCabecalho.add(jLabelOpcoes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1330, 20, -1, -1));
+
+        jLabelMenuCadastros.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelMenuCadastros.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMenuCadastros.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelMenuCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/expand-arrow-24.png"))); // NOI18N
+        jLabelMenuCadastros.setText("Menu de Cadastros");
+        jLabelMenuCadastros.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelMenuCadastrosMouseClicked(evt);
+            }
+        });
+        jPanelCabecalho.add(jLabelMenuCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 4, 200, 50));
 
         jPanelMain.add(jPanelCabecalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 60));
 
@@ -435,17 +645,6 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jPanelMenuLateral.add(jLabelEquipes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
-
-        jLabel78.setBackground(new java.awt.Color(189, 46, 49));
-        jLabel78.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel78.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel78.setText("  Cadastros");
-        jLabel78.setOpaque(true);
-        jPanelMenuLateral.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
-
-        jComboBoxCadastros.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jComboBoxCadastros.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanelMenuLateral.add(jComboBoxCadastros, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
 
         jPanelMain.add(jPanelMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 620));
 
@@ -1578,6 +1777,181 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanelOpcoesMouseExited
 
+    private void jLabelProjetoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjetoMouseEntered
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(true);
+        jLabelProjeto.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelProjetoMouseEntered
+
+    private void jLabelMenuCadastrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMenuCadastrosMouseClicked
+        // TODO add your handling code here:
+        jPanelMenuCadastros.setVisible(true);
+        jPanelMenuCadastrosProjetos.setVisible(false);
+    }//GEN-LAST:event_jLabelMenuCadastrosMouseClicked
+
+    private void jLabelProjetoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProjetoMouseExited
+        // TODO add your handling code here:
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelMenuCadastrosProjetos.setVisible(false);
+    }//GEN-LAST:event_jLabelProjetoMouseExited
+
+    private void jLabelUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuarioMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroUsuario tela = new TelaCadastroUsuario();
+        tela.setVisible(true);
+        jPanelMenuCadastros.setVisible(false);
+    }//GEN-LAST:event_jLabelUsuarioMouseClicked
+
+    private void jLabelClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClientesMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroCliente tela = new TelaCadastroCliente();
+        tela.setVisible(true);
+        jPanelMenuCadastros.setVisible(false);
+    }//GEN-LAST:event_jLabelClientesMouseClicked
+
+    private void jLabelAlunosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAlunosMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroAluno tela = new TelaCadastroAluno();
+        tela.setVisible(true);
+        jPanelMenuCadastros.setVisible(false);
+    }//GEN-LAST:event_jLabelAlunosMouseClicked
+
+    private void jLabelCursosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCursosMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroCurso tela = new TelaCadastroCurso();
+        tela.setVisible(true);
+        jPanelMenuCadastros.setVisible(false);
+    }//GEN-LAST:event_jLabelCursosMouseClicked
+
+    private void jLabelDocentesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDocentesMouseClicked
+        // TODO add your handling code here:
+        TelaCadastroDocente tela = new TelaCadastroDocente();
+        tela.setVisible(true);
+        jPanelMenuCadastros.setVisible(false);
+    }//GEN-LAST:event_jLabelDocentesMouseClicked
+
+    private void jLabelTiposProjetoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelTiposProjetoMouseClicked
+
+    private void jLabelTiposProjetoEmpresaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoEmpresaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelTiposProjetoEmpresaMouseClicked
+
+    private void jLabelTiposNegocioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposNegocioMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelTiposNegocioMouseClicked
+
+    private void jLabelMacrotemaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMacrotemaMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabelMacrotemaMouseClicked
+
+    private void jLabelUsuarioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuarioMouseEntered
+        // TODO add your handling code here:
+        jLabelUsuario.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelUsuarioMouseEntered
+
+    private void jLabelClientesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClientesMouseEntered
+        // TODO add your handling code here:
+        jLabelClientes.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelClientesMouseEntered
+
+    private void jLabelAlunosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAlunosMouseEntered
+        // TODO add your handling code here:
+        jLabelAlunos.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelAlunosMouseEntered
+
+    private void jLabelCursosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCursosMouseEntered
+        // TODO add your handling code here:
+        jLabelCursos.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelCursosMouseEntered
+
+    private void jLabelDocentesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDocentesMouseEntered
+        // TODO add your handling code here:
+        jLabelDocentes.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelDocentesMouseEntered
+
+    private void jLabelTiposProjetoMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoMouseEntered
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(true);
+        jLabelProjeto.setBackground(new java.awt.Color(240, 240, 240));
+        jLabelTiposProjeto.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelTiposProjetoMouseEntered
+
+    private void jLabelTiposProjetoEmpresaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoEmpresaMouseEntered
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(true);
+        jLabelProjeto.setBackground(new java.awt.Color(240, 240, 240));
+        jLabelTiposProjetoEmpresa.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelTiposProjetoEmpresaMouseEntered
+
+    private void jLabelTiposNegocioMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposNegocioMouseEntered
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(true);
+        jLabelProjeto.setBackground(new java.awt.Color(240, 240, 240));
+        jLabelTiposNegocio.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelTiposNegocioMouseEntered
+
+    private void jLabelMacrotemaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMacrotemaMouseEntered
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(true);
+        jLabelProjeto.setBackground(new java.awt.Color(240, 240, 240));
+        jLabelMacrotema.setBackground(new java.awt.Color(240, 240, 240));
+    }//GEN-LAST:event_jLabelMacrotemaMouseEntered
+
+    private void jLabelUsuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelUsuarioMouseExited
+        // TODO add your handling code here:
+        jLabelUsuario.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelUsuarioMouseExited
+
+    private void jLabelClientesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClientesMouseExited
+        // TODO add your handling code here:
+        jLabelClientes.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelClientesMouseExited
+
+    private void jLabelAlunosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelAlunosMouseExited
+        // TODO add your handling code here:
+        jLabelAlunos.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelAlunosMouseExited
+
+    private void jLabelCursosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCursosMouseExited
+        // TODO add your handling code here:
+        jLabelCursos.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelCursosMouseExited
+
+    private void jLabelDocentesMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelDocentesMouseExited
+        // TODO add your handling code here:
+        jLabelDocentes.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelDocentesMouseExited
+
+    private void jLabelTiposProjetoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoMouseExited
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(false);
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposProjeto.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelTiposProjetoMouseExited
+
+    private void jLabelTiposProjetoEmpresaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposProjetoEmpresaMouseExited
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(false);
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposProjetoEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelTiposProjetoEmpresaMouseExited
+
+    private void jLabelTiposNegocioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelTiposNegocioMouseExited
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(false);
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelTiposNegocio.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelTiposNegocioMouseExited
+
+    private void jLabelMacrotemaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelMacrotemaMouseExited
+        // TODO add your handling code here:
+        jPanelMenuCadastrosProjetos.setVisible(false);
+        jLabelProjeto.setBackground(new java.awt.Color(255, 255, 255));
+        jLabelMacrotema.setBackground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabelMacrotemaMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -1614,7 +1988,6 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBoxCadastros;
     private javax.swing.JComboBox<String> jComboBoxMacrotema;
     private javax.swing.JComboBox<String> jComboBoxNegocio;
     private javax.swing.JComboBox<String> jComboBoxRisco;
@@ -1696,23 +2069,33 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel75;
     private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelAlunos;
     private javax.swing.JLabel jLabelBancas;
+    private javax.swing.JLabel jLabelClientes;
     private javax.swing.JLabel jLabelConfiguracoes;
+    private javax.swing.JLabel jLabelCursos;
     private javax.swing.JLabel jLabelDashboard;
+    private javax.swing.JLabel jLabelDocentes;
     private javax.swing.JLabel jLabelEquipes;
     private javax.swing.JLabel jLabelHistorico;
+    private javax.swing.JLabel jLabelMacrotema;
+    private javax.swing.JLabel jLabelMenuCadastros;
     private javax.swing.JLabel jLabelMinhaConta;
     private javax.swing.JLabel jLabelNovaBanca;
     private javax.swing.JLabel jLabelNovaBanca1;
     private javax.swing.JLabel jLabelNovoProjeto;
     private javax.swing.JLabel jLabelOpcoes;
     private javax.swing.JLabel jLabelPesquisarBanca;
+    private javax.swing.JLabel jLabelProjeto;
     private javax.swing.JLabel jLabelProjetos;
     private javax.swing.JLabel jLabelRelatorios;
     private javax.swing.JLabel jLabelSair;
+    private javax.swing.JLabel jLabelTiposNegocio;
+    private javax.swing.JLabel jLabelTiposProjeto;
+    private javax.swing.JLabel jLabelTiposProjetoEmpresa;
+    private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JLabel jLabelUsuarios;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -1748,6 +2131,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelEquipes;
     private javax.swing.JPanel jPanelHistorico;
     private javax.swing.JPanel jPanelMain;
+    private javax.swing.JPanel jPanelMenuCadastros;
+    private javax.swing.JPanel jPanelMenuCadastrosProjetos;
     private javax.swing.JPanel jPanelMenuLateral;
     private javax.swing.JPanel jPanelOpcoes;
     private javax.swing.JPanel jPanelProjetos;
