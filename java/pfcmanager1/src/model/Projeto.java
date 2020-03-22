@@ -20,26 +20,25 @@ public class Projeto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    private String tipoProjeto;
-    private String tipoEmpresa;
-    private String tipoNegocio;
-    private String macrotema;
-    private String riscoProjeto;
-    private Double retornoFin;
-    private String status;
-    private Double semestre;
+    private String tipoProjeto;         //requisito
+    private String tipoEmpresa;         //requisito
+    private String tipoNegocio;         //requisito
+    private String macrotema;           //requisito
+    private String riscoProjeto;        //requisito
+    private Double retornoFinanceiro;   //requisito
+    private String status;              //requisito
+    private Double semestre;            //filtro
     @Temporal(TemporalType.DATE)
-    private Date entregavel1;
+    private Date entregavel1;           //controle do andamento
     @Temporal(TemporalType.DATE)
-    private Date entregavel2;
+    private Date entregavel2;           //controle do andamento
     @Temporal(TemporalType.DATE)
-    private Date entregavel3;    
+    private Date entregavel3;           //controle do andamento
     @OneToOne
-    private Equipe equipe;
+    private Equipe equipe;              
     @ManyToOne
-    private Banca banca;
+    private Banca banca;                
     @ManyToOne
-    private Cliente cliente;
-
+    private Cliente cliente;            //requisito
+    
 }

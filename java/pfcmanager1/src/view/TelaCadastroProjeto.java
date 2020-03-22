@@ -5,11 +5,18 @@
  */
 package view;
 
+import dal.BancaDAL;
+import dal.ClienteDAL;
+import dal.EquipeDAL;
 import dal.ProjetoDAL;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.awt.CardLayout;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.List;
 import javax.swing.JOptionPane;
+import model.Banca;
+import model.Cliente;
+import model.Equipe;
 import model.Projeto;
 
 /**
@@ -34,115 +41,95 @@ public class TelaCadastroProjeto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jComboBoxRisco = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        jTextFieldRetornoFin = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
+        jPanelCadastroProjeto1 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        jTextFieldCliente = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabelClose = new javax.swing.JLabel();
+        jLabelProximo1 = new javax.swing.JLabel();
+        jComboBoxCliente = new javax.swing.JComboBox<>();
+        jPanelCadastroProjeto2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jComboBoxTipoProjeto = new javax.swing.JComboBox<>();
         jLabel11 = new javax.swing.JLabel();
-        jComboBoxNegocio = new javax.swing.JComboBox<>();
+        jComboBoxTipoNegocio = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jComboBoxTipoProjetoEmpresa = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
         jComboBoxMacrotema = new javax.swing.JComboBox<>();
-        jLabel27 = new javax.swing.JLabel();
-        jLabelClose = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jButtonCadastrar = new javax.swing.JButton();
-        jButtonCancelar = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        jLabelClose1 = new javax.swing.JLabel();
+        jLabelProximo2 = new javax.swing.JLabel();
+        jLabelVoltar1 = new javax.swing.JLabel();
+        jPanelCadastroProjeto3 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
+        jComboBoxSemestre = new javax.swing.JComboBox<>();
+        jLabel8 = new javax.swing.JLabel();
+        jTextFieldRetornoFinanceiro = new javax.swing.JTextField();
+        jComboBoxStatus = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        jComboBoxRisco = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabelProximo3 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabelClose2 = new javax.swing.JLabel();
+        jLabelSalvar1 = new javax.swing.JLabel();
+        jLabelVoltar2 = new javax.swing.JLabel();
+        jPanelCadastroProjeto4 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jComboBoxEquipe = new javax.swing.JComboBox<>();
+        jLabelProximo4 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabelClose3 = new javax.swing.JLabel();
+        jLabelVoltar3 = new javax.swing.JLabel();
+        jPanelCadastroProjeto5 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jTextFieldEntregavel1 = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        jTextFieldEntregavel2 = new javax.swing.JTextField();
+        jTextFieldEntregavel3 = new javax.swing.JTextField();
+        jLabelProximo5 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabelClose4 = new javax.swing.JLabel();
+        jLabelVoltar4 = new javax.swing.JLabel();
+        jLabelSalvar2 = new javax.swing.JLabel();
+        jPanelCadastroProjeto6 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jComboBoxBanca = new javax.swing.JComboBox<>();
+        jLabelSalvar3 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabelClose5 = new javax.swing.JLabel();
+        jLabelVoltar5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBackground(new java.awt.Color(0, 127, 195));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel7.setText("Nível de Risco:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 260, -1, -1));
-
-        jComboBoxRisco.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxRisco.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxRisco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Alto", "Médio", "Baixo" }));
-        jPanel1.add(jComboBoxRisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 130, -1));
-
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel8.setText("Retorno Financeiro:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
-
-        jTextFieldRetornoFin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextFieldRetornoFin.setForeground(new java.awt.Color(0, 51, 102));
-        jTextFieldRetornoFin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldRetornoFinActionPerformed(evt);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
             }
         });
-        jPanel1.add(jTextFieldRetornoFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 300, -1));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 127, 195));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new java.awt.CardLayout());
+
+        jPanelCadastroProjeto1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(0, 51, 102));
         jLabel26.setText("Novo Projeto");
-        jPanel1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-
-        jTextFieldCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextFieldCliente.setForeground(new java.awt.Color(0, 51, 102));
-        jPanel1.add(jTextFieldCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 300, -1));
-
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel10.setText("Tipo de Projeto:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
-
-        jComboBoxTipoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxTipoProjeto.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxTipoProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Interno", "Externo" }));
-        jPanel1.add(jComboBoxTipoProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 300, -1));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel11.setText("Tipo de Negócio:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 100, -1, -1));
-
-        jComboBoxNegocio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxNegocio.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxNegocio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Escola Técnica", "Serviços Técnicos", "Centro Universitário", "P&D&I", "Comércio", "Indústria", "Social", "CIMATEC", "CIMATEC PARK" }));
-        jPanel1.add(jComboBoxNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 130, 300, -1));
-
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel15.setText("Tipo do Projeto Empresa:");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, -1, -1));
-
-        jComboBoxTipoProjetoEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxTipoProjetoEmpresa.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxTipoProjetoEmpresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pesquisa", "Projeto", "Desenvolvimento de Produto", "Processo" }));
-        jPanel1.add(jComboBoxTipoProjetoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 300, -1));
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel16.setText("Macrotema:");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
-
-        jComboBoxMacrotema.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jComboBoxMacrotema.setForeground(new java.awt.Color(0, 51, 102));
-        jComboBoxMacrotema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sustentabilidade", "Inovação de produto", "Inovação de processo", "Otimização de Processo", "Atualização tecnológica", "Responsabilidade Social", "Construção de protótipos", "Desenvolvimento de ferramentas", "Plantas e modelagens", "Manutenção" }));
-        jPanel1.add(jComboBoxMacrotema, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 300, -1));
+        jPanelCadastroProjeto1.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(0, 51, 102));
         jLabel27.setText("Cliente:");
-        jPanel1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jPanelCadastroProjeto1.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
 
         jLabelClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
         jLabelClose.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,82 +137,643 @@ public class TelaCadastroProjeto extends javax.swing.JFrame {
                 jLabelCloseMouseClicked(evt);
             }
         });
-        jPanel1.add(jLabelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 10, -1, -1));
+        jPanelCadastroProjeto1.add(jLabelClose, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
 
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jButtonCadastrar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButtonCadastrar.setForeground(new java.awt.Color(0, 51, 102));
-        jButtonCadastrar.setText("Cadastrar");
-        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCadastrarActionPerformed(evt);
+        jLabelProximo1.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelProximo1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProximo1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelProximo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelProximo1.setText("Próximo");
+        jLabelProximo1.setOpaque(true);
+        jLabelProximo1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProximo1MouseClicked(evt);
             }
         });
-        jPanel3.add(jButtonCadastrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(537, 20, 120, -1));
+        jPanelCadastroProjeto1.add(jLabelProximo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 190, 60));
 
-        jButtonCancelar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButtonCancelar.setForeground(new java.awt.Color(0, 51, 102));
-        jButtonCancelar.setText("Cancelar");
-        jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCancelarActionPerformed(evt);
+        jComboBoxCliente.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxCliente.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto1.add(jComboBoxCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, -1));
+
+        jPanel2.add(jPanelCadastroProjeto1, "cadastroProjeto1");
+
+        jPanelCadastroProjeto2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel10.setText("Tipo de Projeto:");
+        jPanelCadastroProjeto2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jComboBoxTipoProjeto.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxTipoProjeto.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxTipoProjeto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Interno", "Externo" }));
+        jPanelCadastroProjeto2.add(jComboBoxTipoProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, -1));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel11.setText("Tipo de Negócio:");
+        jPanelCadastroProjeto2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+
+        jComboBoxTipoNegocio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxTipoNegocio.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxTipoNegocio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Escola Técnica", "Serviços Técnicos", "Centro Universitário", "P&D&I", "Comércio", "Indústria", "Social", "CIMATEC", "CIMATEC PARK" }));
+        jPanelCadastroProjeto2.add(jComboBoxTipoNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 550, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel15.setText("Tipo do Projeto Empresa:");
+        jPanelCadastroProjeto2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jComboBoxTipoProjetoEmpresa.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxTipoProjetoEmpresa.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxTipoProjetoEmpresa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Pesquisa", "Projeto", "Desenvolvimento de Produto", "Processo" }));
+        jPanelCadastroProjeto2.add(jComboBoxTipoProjetoEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 550, -1));
+
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel16.setText("Macrotema:");
+        jPanelCadastroProjeto2.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+
+        jComboBoxMacrotema.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxMacrotema.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxMacrotema.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Sustentabilidade", "Inovação de produto", "Inovação de processo", "Otimização de Processo", "Atualização tecnológica", "Responsabilidade Social", "Construção de protótipos", "Desenvolvimento de ferramentas", "Plantas e modelagens", "Manutenção" }));
+        jPanelCadastroProjeto2.add(jComboBoxMacrotema, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 550, -1));
+
+        jLabel28.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel28.setText("Novo Projeto");
+        jPanelCadastroProjeto2.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabelClose1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClose1MouseClicked(evt);
             }
         });
-        jPanel3.add(jButtonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 120, -1));
+        jPanelCadastroProjeto2.add(jLabelClose1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
 
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 680, 70));
+        jLabelProximo2.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelProximo2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProximo2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelProximo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelProximo2.setText("Próximo");
+        jLabelProximo2.setOpaque(true);
+        jLabelProximo2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProximo2MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto2.add(jLabelProximo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 60));
 
-        jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 680, 540));
+        jLabelVoltar1.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelVoltar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVoltar1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVoltar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVoltar1.setText("Voltar");
+        jLabelVoltar1.setOpaque(true);
+        jLabelVoltar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelVoltar1MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto2.add(jLabelVoltar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 170, 60));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 580));
+        jPanel2.add(jPanelCadastroProjeto2, "cadastroProjeto2");
+
+        jPanelCadastroProjeto3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel13.setText("Semestre:");
+        jPanelCadastroProjeto3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jComboBoxSemestre.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxSemestre.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxSemestre.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "2020.1", "2020.2", "2021.1", "2021.2", "2022.1", "2022.2", "2023.1", "2023.2", "2024.1", "2024.2", "2025.1", "2025.2", "2026.1", "2026.2", "2027.1", "2027.2", "2028.1", "2028.2", "2029.1", "2029.2", "2030.1", "2030.2" }));
+        jPanelCadastroProjeto3.add(jComboBoxSemestre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 550, 30));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel8.setText("Retorno Financeiro:");
+        jPanelCadastroProjeto3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 320, -1, -1));
+
+        jTextFieldRetornoFinanceiro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldRetornoFinanceiro.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto3.add(jTextFieldRetornoFinanceiro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 550, -1));
+
+        jComboBoxStatus.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxStatus.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Pendente", "Cancelado", "Execução", "Banco", "Finalizado" }));
+        jPanelCadastroProjeto3.add(jComboBoxStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 550, 30));
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel12.setText("Status:");
+        jPanelCadastroProjeto3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
+
+        jComboBoxRisco.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxRisco.setForeground(new java.awt.Color(0, 51, 102));
+        jComboBoxRisco.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Alto", "Médio", "Baixo" }));
+        jPanelCadastroProjeto3.add(jComboBoxRisco, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, 30));
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel9.setText("Nível de Risco:");
+        jPanelCadastroProjeto3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jLabelProximo3.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelProximo3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProximo3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelProximo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelProximo3.setText("Próximo");
+        jLabelProximo3.setOpaque(true);
+        jLabelProximo3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProximo3MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto3.add(jLabelProximo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 60));
+
+        jLabel29.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel29.setText("Novo Projeto");
+        jPanelCadastroProjeto3.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabelClose2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClose2MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto3.add(jLabelClose2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+
+        jLabelSalvar1.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelSalvar1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSalvar1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSalvar1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSalvar1.setText("Salvar");
+        jLabelSalvar1.setOpaque(true);
+        jLabelSalvar1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSalvar1MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto3.add(jLabelSalvar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 170, 60));
+
+        jLabelVoltar2.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelVoltar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVoltar2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVoltar2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVoltar2.setText("Voltar");
+        jLabelVoltar2.setOpaque(true);
+        jLabelVoltar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelVoltar2MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto3.add(jLabelVoltar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 170, 60));
+
+        jPanel2.add(jPanelCadastroProjeto3, "cadastroProjeto3");
+
+        jPanelCadastroProjeto4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel20.setText("Equipe:");
+        jPanelCadastroProjeto4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 20));
+
+        jComboBoxEquipe.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxEquipe.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto4.add(jComboBoxEquipe, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, -1));
+
+        jLabelProximo4.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelProximo4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProximo4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelProximo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelProximo4.setText("Próximo");
+        jLabelProximo4.setOpaque(true);
+        jLabelProximo4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProximo4MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto4.add(jLabelProximo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 60));
+
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel30.setText("Novo Projeto");
+        jPanelCadastroProjeto4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabelClose3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClose3MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto4.add(jLabelClose3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+
+        jLabelVoltar3.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelVoltar3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVoltar3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVoltar3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVoltar3.setText("Voltar");
+        jLabelVoltar3.setOpaque(true);
+        jLabelVoltar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelVoltar3MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto4.add(jLabelVoltar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 170, 60));
+
+        jPanel2.add(jPanelCadastroProjeto4, "cadastroProjeto4");
+
+        jPanelCadastroProjeto5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel19.setText("Entregável 3:");
+        jPanelCadastroProjeto5.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, 20));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel14.setText("Entregável 1:");
+        jPanelCadastroProjeto5.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, -1));
+
+        jTextFieldEntregavel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldEntregavel1.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto5.add(jTextFieldEntregavel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, -1));
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel17.setText("Entregável 2:");
+        jPanelCadastroProjeto5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jTextFieldEntregavel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldEntregavel2.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto5.add(jTextFieldEntregavel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 550, -1));
+
+        jTextFieldEntregavel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jTextFieldEntregavel3.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto5.add(jTextFieldEntregavel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 550, -1));
+
+        jLabelProximo5.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelProximo5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelProximo5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelProximo5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelProximo5.setText("Próximo");
+        jLabelProximo5.setOpaque(true);
+        jLabelProximo5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelProximo5MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto5.add(jLabelProximo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 60));
+
+        jLabel31.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel31.setText("Novo Projeto");
+        jPanelCadastroProjeto5.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabelClose4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClose4MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto5.add(jLabelClose4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+
+        jLabelVoltar4.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelVoltar4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVoltar4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVoltar4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVoltar4.setText("Voltar");
+        jLabelVoltar4.setOpaque(true);
+        jLabelVoltar4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelVoltar4MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto5.add(jLabelVoltar4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 170, 60));
+
+        jLabelSalvar2.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelSalvar2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSalvar2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSalvar2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSalvar2.setText("Salvar");
+        jLabelSalvar2.setOpaque(true);
+        jLabelSalvar2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSalvar2MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto5.add(jLabelSalvar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 170, 60));
+
+        jPanel2.add(jPanelCadastroProjeto5, "cadastroProjeto5");
+
+        jPanelCadastroProjeto6.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelCadastroProjeto6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel21.setText("Banca:");
+        jPanelCadastroProjeto6.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 20));
+
+        jComboBoxBanca.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jComboBoxBanca.setForeground(new java.awt.Color(0, 51, 102));
+        jPanelCadastroProjeto6.add(jComboBoxBanca, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 550, -1));
+
+        jLabelSalvar3.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelSalvar3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelSalvar3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSalvar3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSalvar3.setText("Salvar");
+        jLabelSalvar3.setOpaque(true);
+        jLabelSalvar3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelSalvar3MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto6.add(jLabelSalvar3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 460, 170, 60));
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(0, 51, 102));
+        jLabel32.setText("Novo Projeto");
+        jPanelCadastroProjeto6.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        jLabelClose5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/iconfinder_close_1814098.png"))); // NOI18N
+        jLabelClose5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelClose5MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto6.add(jLabelClose5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 10, -1, -1));
+
+        jLabelVoltar5.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelVoltar5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelVoltar5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelVoltar5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelVoltar5.setText("Voltar");
+        jLabelVoltar5.setOpaque(true);
+        jLabelVoltar5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelVoltar5MouseClicked(evt);
+            }
+        });
+        jPanelCadastroProjeto6.add(jLabelVoltar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 460, 170, 60));
+
+        jPanel2.add(jPanelCadastroProjeto6, "cadastroProjeto6");
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 610, 540));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 650, 580));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextFieldRetornoFinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldRetornoFinActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldRetornoFinActionPerformed
-
-    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
-//        // TODO add your handling code here:
-//        try {
-//            Projeto p = new Projeto();
-//
-//            p.setCliente(jTextFieldCliente.getText());
-//            p.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
-//            p.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
-//            p.setTipoNegocio(jComboBoxNegocio.getSelectedItem().toString());
-//            p.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
-//            p.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
-//            p.setRetornoFin(Double.parseDouble(jTextFieldRetornoFin.getText()));
-//            p.setStatus("pendente");
-//
-//            ProjetoDAL pDAL = new ProjetoDAL();
-//
-//            pDAL.inserir(p);
-//
-//            JOptionPane.showMessageDialog(this, "Projeto cadastrado com sucesso!");
-//
-//            this.dispose();
-//
-//        } catch (SQLException ex) {
-//            Logger.getLogger(TelaCadastroProjeto.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this, "Erro 1: Não foi possível acessar o banco de dados.");
-//        }
-
-    }//GEN-LAST:event_jButtonCadastrarActionPerformed
-
-    private void jButtonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelarActionPerformed
-        // TODO add your handling code here:
-        this.dispose();
-    }//GEN-LAST:event_jButtonCancelarActionPerformed
-
     private void jLabelCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelCloseMouseClicked
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jLabelCloseMouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:
+
+        jComboBoxCliente.addItem("");           //default value
+        jComboBoxEquipe.addItem("");            //default value
+        jComboBoxBanca.addItem("");             //default value
+
+        ClienteDAL clienteDal = new ClienteDAL();
+        EquipeDAL equipeDal = new EquipeDAL();
+        BancaDAL bancaDal = new BancaDAL();
+
+        List<Cliente> clientes = clienteDal.findAll();
+        List<Equipe> equipes = equipeDal.findAll();
+        List<Banca> bancas = bancaDal.findAll();
+
+        for (Cliente c : clientes) {
+            jComboBoxCliente.addItem(c);
+        }
+
+        for (Equipe e : equipes) {
+            jComboBoxEquipe.addItem(e);
+        }
+
+        for (Banca b : bancas) {
+            jComboBoxBanca.addItem(b);
+        }
+
+    }//GEN-LAST:event_formWindowOpened
+
+    private void jLabelProximo1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProximo1MouseClicked
+        // TODO add your handling code here:
+        if (jComboBoxCliente.getSelectedItem() == "") {
+            JOptionPane.showMessageDialog(rootPane, "Selecione um cliente.");
+        } else {
+            CardLayout cl = (CardLayout) jPanel2.getLayout();
+            cl.show(jPanel2, "cadastroProjeto2");
+        }
+    }//GEN-LAST:event_jLabelProximo1MouseClicked
+
+    private void jLabelClose1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClose1MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelClose1MouseClicked
+
+    private void jLabelProximo2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProximo2MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto3");
+    }//GEN-LAST:event_jLabelProximo2MouseClicked
+
+    private void jLabelProximo3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProximo3MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto4");
+    }//GEN-LAST:event_jLabelProximo3MouseClicked
+
+    private void jLabelProximo4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProximo4MouseClicked
+        // TODO add your handling code here:
+        if (jComboBoxEquipe.getSelectedItem() == "") {
+            JOptionPane.showMessageDialog(rootPane, "Selecione uma equpe");
+        } else {
+            CardLayout cl = (CardLayout) jPanel2.getLayout();
+            cl.show(jPanel2, "cadastroProjeto5");
+        }
+    }//GEN-LAST:event_jLabelProximo4MouseClicked
+
+    private void jLabelProximo5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelProximo5MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto6");
+    }//GEN-LAST:event_jLabelProximo5MouseClicked
+
+    private void jLabelSalvar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSalvar3MouseClicked
+        // TODO add your handling code here:
+        if (jComboBoxBanca.getSelectedItem() == "") {
+            JOptionPane.showMessageDialog(rootPane, "Selecione uma banca");
+        } else {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+            ProjetoDAL projetoDal = new ProjetoDAL();
+
+            Projeto projeto = new Projeto();
+
+            try {
+                projeto.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
+                projeto.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
+                projeto.setTipoNegocio(jComboBoxTipoNegocio.getSelectedItem().toString());
+                projeto.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
+                projeto.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
+                projeto.setRetornoFinanceiro(Double.parseDouble(jTextFieldRetornoFinanceiro.getText()));
+                projeto.setStatus(jComboBoxStatus.getSelectedItem().toString());
+                projeto.setSemestre(Double.parseDouble(jComboBoxSemestre.getSelectedItem().toString()));
+                projeto.setEntregavel1(format.parse(jTextFieldEntregavel1.getText()));  // DATA
+                projeto.setEntregavel2(format.parse(jTextFieldEntregavel2.getText()));  // DATA
+                projeto.setEntregavel3(format.parse(jTextFieldEntregavel3.getText()));  // DATA
+
+                projeto.setCliente((Cliente) jComboBoxCliente.getSelectedItem());
+                projeto.setEquipe((Equipe) jComboBoxEquipe.getSelectedItem());
+                projeto.setBanca((Banca) jComboBoxBanca.getSelectedItem());
+
+                projetoDal.save(projeto);
+
+                JOptionPane.showMessageDialog(rootPane, "Projeto cadastrado com sucesso");
+                this.dispose();
+            } catch (ParseException pe) {
+                System.out.println("ERRO:" + pe); // trocar por uma exceção digna.
+            }
+        }
+    }//GEN-LAST:event_jLabelSalvar3MouseClicked
+
+    private void jLabelClose2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClose2MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelClose2MouseClicked
+
+    private void jLabelClose3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClose3MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelClose3MouseClicked
+
+    private void jLabelClose4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClose4MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelClose4MouseClicked
+
+    private void jLabelClose5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelClose5MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jLabelClose5MouseClicked
+
+    private void jLabelSalvar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSalvar1MouseClicked
+        // TODO add your handling code here:
+        int option = JOptionPane.showConfirmDialog(rootPane, "Deseja salvar o projeto sem atribuir uma Equipe?", "Projeto sem Equipe", 0);
+
+        if (option == 0) {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+            ProjetoDAL projetoDal = new ProjetoDAL();
+
+            Projeto projeto = new Projeto();
+
+            projeto.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
+            projeto.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
+            projeto.setTipoNegocio(jComboBoxTipoNegocio.getSelectedItem().toString());
+            projeto.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
+            projeto.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
+            projeto.setRetornoFinanceiro(Double.parseDouble(jTextFieldRetornoFinanceiro.getText()));
+            projeto.setStatus(jComboBoxStatus.getSelectedItem().toString());
+            projeto.setSemestre(Double.parseDouble(jComboBoxSemestre.getSelectedItem().toString()));
+//                projeto.setEntregavel1(format.parse(jTextFieldEntregavel1.getText()));  // Data
+//                projeto.setEntregavel2(format.parse(jTextFieldEntregavel2.getText()));  // Data
+//                projeto.setEntregavel3(format.parse(jTextFieldEntregavel3.getText()));  // Data
+
+            projeto.setCliente((Cliente) jComboBoxCliente.getSelectedItem());
+//                projeto.setEquipe((Equipe) jComboBoxEquipe.getSelectedItem());
+//                projeto.setBanca((Banca) jComboBoxBanca.getSelectedItem());
+
+            projetoDal.save(projeto);
+            JOptionPane.showMessageDialog(rootPane, "Projeto cadastrado com sucesso");
+            this.dispose();
+        } else if (option == 1) {
+            jLabelSalvar1.setVisible(false);
+        }
+    }//GEN-LAST:event_jLabelSalvar1MouseClicked
+
+    private void jLabelVoltar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVoltar2MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto2");
+    }//GEN-LAST:event_jLabelVoltar2MouseClicked
+
+    private void jLabelVoltar1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVoltar1MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto1");
+    }//GEN-LAST:event_jLabelVoltar1MouseClicked
+
+    private void jLabelVoltar3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVoltar3MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto3");
+    }//GEN-LAST:event_jLabelVoltar3MouseClicked
+
+    private void jLabelVoltar4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVoltar4MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto4");
+    }//GEN-LAST:event_jLabelVoltar4MouseClicked
+
+    private void jLabelVoltar5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelVoltar5MouseClicked
+        // TODO add your handling code here:
+        CardLayout cl = (CardLayout) jPanel2.getLayout();
+        cl.show(jPanel2, "cadastroProjeto5");
+    }//GEN-LAST:event_jLabelVoltar5MouseClicked
+
+    private void jLabelSalvar2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelSalvar2MouseClicked
+        // TODO add your handling code here:
+        int option = JOptionPane.showConfirmDialog(rootPane, "Deseja salvar o projeto sem atribuir uma Banca?", "Projeto sem Equipe", 0);
+
+        if (option == 0) {
+            SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+
+            ProjetoDAL projetoDal = new ProjetoDAL();
+
+            Projeto projeto = new Projeto();
+
+            try {
+                projeto.setTipoProjeto(jComboBoxTipoProjeto.getSelectedItem().toString());
+                projeto.setTipoEmpresa(jComboBoxTipoProjetoEmpresa.getSelectedItem().toString());
+                projeto.setTipoNegocio(jComboBoxTipoNegocio.getSelectedItem().toString());
+                projeto.setMacrotema(jComboBoxMacrotema.getSelectedItem().toString());
+                projeto.setRiscoProjeto(jComboBoxRisco.getSelectedItem().toString());
+                projeto.setRetornoFinanceiro(Double.parseDouble(jTextFieldRetornoFinanceiro.getText()));
+                projeto.setStatus(jComboBoxStatus.getSelectedItem().toString());
+                projeto.setSemestre(Double.parseDouble(jComboBoxSemestre.getSelectedItem().toString()));
+                projeto.setEntregavel1(format.parse(jTextFieldEntregavel1.getText()));  // DATA
+                projeto.setEntregavel2(format.parse(jTextFieldEntregavel2.getText()));  // DATA
+                projeto.setEntregavel3(format.parse(jTextFieldEntregavel3.getText()));  // DATA
+
+                projeto.setCliente((Cliente) jComboBoxCliente.getSelectedItem());
+                projeto.setEquipe((Equipe) jComboBoxEquipe.getSelectedItem());
+//                projeto.setBanca((Banca) jComboBoxBanca.getSelectedItem());
+
+                projetoDal.save(projeto);
+                this.dispose();
+            } catch (ParseException pe) {
+                System.out.println("ERRO:" + pe); // trocar por uma exceção digna.
+            }
+        } else if (option == 1) {
+            jLabelSalvar1.setVisible(false);
+            jLabelSalvar2.setVisible(false);
+        }
+    }//GEN-LAST:event_jLabelSalvar2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -264,26 +812,66 @@ public class TelaCadastroProjeto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCadastrar;
-    private javax.swing.JButton jButtonCancelar;
+    private javax.swing.JComboBox<Object> jComboBoxBanca;
+    private javax.swing.JComboBox<Object> jComboBoxCliente;
+    private javax.swing.JComboBox<Object> jComboBoxEquipe;
     private javax.swing.JComboBox<String> jComboBoxMacrotema;
-    private javax.swing.JComboBox<String> jComboBoxNegocio;
     private javax.swing.JComboBox<String> jComboBoxRisco;
+    private javax.swing.JComboBox<String> jComboBoxSemestre;
+    private javax.swing.JComboBox<String> jComboBoxStatus;
+    private javax.swing.JComboBox<String> jComboBoxTipoNegocio;
     private javax.swing.JComboBox<String> jComboBoxTipoProjeto;
     private javax.swing.JComboBox<String> jComboBoxTipoProjetoEmpresa;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelClose;
+    private javax.swing.JLabel jLabelClose1;
+    private javax.swing.JLabel jLabelClose2;
+    private javax.swing.JLabel jLabelClose3;
+    private javax.swing.JLabel jLabelClose4;
+    private javax.swing.JLabel jLabelClose5;
+    private javax.swing.JLabel jLabelProximo1;
+    private javax.swing.JLabel jLabelProximo2;
+    private javax.swing.JLabel jLabelProximo3;
+    private javax.swing.JLabel jLabelProximo4;
+    private javax.swing.JLabel jLabelProximo5;
+    private javax.swing.JLabel jLabelSalvar1;
+    private javax.swing.JLabel jLabelSalvar2;
+    private javax.swing.JLabel jLabelSalvar3;
+    private javax.swing.JLabel jLabelVoltar1;
+    private javax.swing.JLabel jLabelVoltar2;
+    private javax.swing.JLabel jLabelVoltar3;
+    private javax.swing.JLabel jLabelVoltar4;
+    private javax.swing.JLabel jLabelVoltar5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField jTextFieldCliente;
-    private javax.swing.JTextField jTextFieldRetornoFin;
+    private javax.swing.JPanel jPanelCadastroProjeto1;
+    private javax.swing.JPanel jPanelCadastroProjeto2;
+    private javax.swing.JPanel jPanelCadastroProjeto3;
+    private javax.swing.JPanel jPanelCadastroProjeto4;
+    private javax.swing.JPanel jPanelCadastroProjeto5;
+    private javax.swing.JPanel jPanelCadastroProjeto6;
+    private javax.swing.JTextField jTextFieldEntregavel1;
+    private javax.swing.JTextField jTextFieldEntregavel2;
+    private javax.swing.JTextField jTextFieldEntregavel3;
+    private javax.swing.JTextField jTextFieldRetornoFinanceiro;
     // End of variables declaration//GEN-END:variables
 }

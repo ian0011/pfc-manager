@@ -48,7 +48,5 @@ public class Aluno {
     public String toString() {
         return getNome(); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 
 }

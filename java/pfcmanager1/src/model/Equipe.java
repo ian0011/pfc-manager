@@ -6,11 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
-import lombok.Getter;
-import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 public class Equipe {
 
@@ -84,6 +80,11 @@ public class Equipe {
 
     public void setGpe(Docente gpe) {
         this.gpe = gpe;
+    }
+
+    @Override
+    public String toString() {
+        return getGestor().toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

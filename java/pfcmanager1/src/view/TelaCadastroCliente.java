@@ -7,6 +7,8 @@ package view;
 
 import dal.ClienteDAL;
 import java.awt.CardLayout;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 import model.Cliente;
 
 /**
@@ -71,6 +73,11 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 127, 195));
@@ -84,7 +91,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel1.setText("Cadastro de Cliente");
+        jLabel1.setText("Cadastro de Cliente 1/3");
         jPanelCadastroCliente1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -142,7 +149,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel4.setText("Cadastro de Cliente");
+        jLabel4.setText("Cadastro de Cliente 2/3");
         jPanelCadastroCliente2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jTextFieldNomeRepresentante.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -213,7 +220,7 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 51, 102));
-        jLabel7.setText("Cadastro de Cliente");
+        jLabel7.setText("Cadastro de Cliente 3/3");
         jPanelCadastroCliente3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -349,6 +356,10 @@ public class TelaCadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.dispose();
     }//GEN-LAST:event_jLabelClose2MouseClicked
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        // TODO add your handling code here:        
+    }//GEN-LAST:event_formWindowOpened
 
     /**
      * @param args the command line arguments

@@ -31,7 +31,7 @@ public class ProjetoTeste {
                 projeto.setTipoNegocio("CIMATEC");
                 projeto.setMacrotema("Otimização de Processo");
                 projeto.setRiscoProjeto("Baixo");
-                projeto.setRetornoFin(10000.0);
+                projeto.setRetornoFinanceiro(10000.0);
                 projeto.setStatus("Ativo");
                 projeto.setCliente(cliente);
                 projeto.setEquipe(equipe);
@@ -47,7 +47,7 @@ public class ProjetoTeste {
                 projeto.setTipoNegocio("CIMATEC");
                 projeto.setMacrotema("Otimização de Processo");
                 projeto.setRiscoProjeto("Baixo");
-                projeto.setRetornoFin(10000.0);
+                projeto.setRetornoFinanceiro(10000.0);
                 projeto.setStatus("Ativo");
                 projeto.setCliente(cliente);
                 projeto.setEquipe(equipe);
@@ -62,7 +62,7 @@ public class ProjetoTeste {
                 System.out.println("Tipo de Negócio: " + projeto.getTipoNegocio());
                 System.out.println("Macrotema: " + projeto.getMacrotema());
                 System.out.println("Risco: " + projeto.getRiscoProjeto());
-                System.out.println("Retorno Financeiro: " + projeto.getRetornoFin());
+                System.out.println("Retorno Financeiro: " + projeto.getRetornoFinanceiro());
                 System.out.println("Status: " + projeto.getStatus());
                 System.out.println("Equipe: " + projeto.getEquipe().getId());
                 System.out.println("Banca: " + projeto.getBanca().getId());
@@ -75,7 +75,7 @@ public class ProjetoTeste {
                     System.out.println("Tipo de Negócio: " + projeto.getTipoNegocio());
                     System.out.println("Macrotema: " + projeto.getMacrotema());
                     System.out.println("Risco: " + projeto.getRiscoProjeto());
-                    System.out.println("Retorno Financeiro: " + projeto.getRetornoFin());
+                    System.out.println("Retorno Financeiro: " + projeto.getRetornoFinanceiro());
                     System.out.println("Status: " + projeto.getStatus());
                     System.out.println("Equipe: " + projeto.getEquipe().getGestor());
                     System.out.println("Banca: " + projeto.getBanca().getOrientador());
