@@ -7,12 +7,14 @@ package view;
 
 import dal.BancaDAL;
 import dal.ClienteDAL;
+import dal.ProjetoDAL;
 import java.awt.CardLayout;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 import model.Banca;
 import model.Cliente;
+import model.Projeto;
 
 /**
  *
@@ -130,6 +132,7 @@ public class Principal extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jPanel3 = new javax.swing.JPanel();
         jLabelNovoProjeto = new javax.swing.JLabel();
+        jLabelPesquisarProjeto = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableProjetos = new javax.swing.JTable();
@@ -247,7 +250,6 @@ public class Principal extends javax.swing.JFrame {
         jTextField16 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanelMain.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -581,7 +583,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelRelatoriosMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 250, 50));
+        jPanelMenuLateral.add(jLabelRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
 
         jLabelDashboard.setBackground(new java.awt.Color(189, 46, 49));
         jLabelDashboard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -617,7 +619,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelProjetosMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelProjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 250, 50));
+        jPanelMenuLateral.add(jLabelProjetos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 250, 50));
 
         jLabelHistorico.setBackground(new java.awt.Color(189, 46, 49));
         jLabelHistorico.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -635,7 +637,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelHistoricoMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 250, 50));
+        jPanelMenuLateral.add(jLabelHistorico, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 250, 50));
 
         jLabelBancas.setBackground(new java.awt.Color(189, 46, 49));
         jLabelBancas.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -653,7 +655,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelBancasMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelBancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 250, 50));
+        jPanelMenuLateral.add(jLabelBancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
 
         jLabelEquipes.setBackground(new java.awt.Color(189, 46, 49));
         jLabelEquipes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -671,7 +673,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelEquipesMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelEquipes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 250, 50));
+        jPanelMenuLateral.add(jLabelEquipes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 250, 50));
 
         jLabelClientes.setBackground(new java.awt.Color(189, 46, 49));
         jLabelClientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -689,7 +691,7 @@ public class Principal extends javax.swing.JFrame {
                 jLabelClientesMouseExited(evt);
             }
         });
-        jPanelMenuLateral.add(jLabelClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 250, 50));
+        jPanelMenuLateral.add(jLabelClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 250, 50));
 
         jPanelMain.add(jPanelMenuLateral, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 250, 620));
 
@@ -1069,6 +1071,8 @@ public class Principal extends javax.swing.JFrame {
 
         jPanelProjetos.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 100));
 
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabelNovoProjeto.setBackground(new java.awt.Color(0, 127, 195));
         jLabelNovoProjeto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabelNovoProjeto.setForeground(new java.awt.Color(255, 255, 255));
@@ -1081,23 +1085,21 @@ public class Principal extends javax.swing.JFrame {
                 jLabelNovoProjetoMouseClicked(evt);
             }
         });
+        jPanel3.add(jLabelNovoProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 19, 180, 50));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabelNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(919, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabelNovoProjeto, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(21, Short.MAX_VALUE))
-        );
+        jLabelPesquisarProjeto.setBackground(new java.awt.Color(0, 127, 195));
+        jLabelPesquisarProjeto.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabelPesquisarProjeto.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPesquisarProjeto.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPesquisarProjeto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search-24.png"))); // NOI18N
+        jLabelPesquisarProjeto.setText("Pesquisar Projeto");
+        jLabelPesquisarProjeto.setOpaque(true);
+        jLabelPesquisarProjeto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabelPesquisarProjetoMouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabelPesquisarProjeto, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 20, 180, 50));
 
         jPanelProjetos.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 530, 1120, 90));
 
@@ -1107,18 +1109,18 @@ public class Principal extends javax.swing.JFrame {
         jTableProjetos.setForeground(new java.awt.Color(0, 51, 102));
         jTableProjetos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Cliente", "Equipe", "Banca", "Tipo Projeto", "Tipo Empresa", "Tipo Negócio", "Macrotema", "Risco", "Retorno", "Status", "Semestre"
             }
         ));
         jScrollPane1.setViewportView(jTableProjetos);
 
-        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 960, 120));
+        jPanel4.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 1060, 120));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 51, 102));
@@ -2243,6 +2245,30 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabelPesquisarClienteMouseClicked
 
+    private void jLabelPesquisarProjetoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelPesquisarProjetoMouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel tabela = (DefaultTableModel) jTableProjetos.getModel();
+        tabela.setNumRows(0);
+        ProjetoDAL dal = new ProjetoDAL();
+        List<Projeto> projetos = dal.findAll();
+
+        for (Projeto p : projetos) {
+            tabela.addRow(new Object[]{
+                p.getCliente(),
+                p.getEquipe(),
+                p.getBanca(),
+                p.getTipoProjeto(),
+                p.getTipoEmpresa(),
+                p.getTipoNegocio(),
+                p.getMacrotema(),
+                p.getRiscoProjeto(),
+                p.getRetornoFinanceiro(),
+                p.getStatus(),
+                p.getSemestre()
+            });
+        }
+    }//GEN-LAST:event_jLabelPesquisarProjetoMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2385,6 +2411,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelOpcoes;
     private javax.swing.JLabel jLabelPesquisarBanca;
     private javax.swing.JLabel jLabelPesquisarCliente;
+    private javax.swing.JLabel jLabelPesquisarProjeto;
     private javax.swing.JLabel jLabelPorCurso;
     private javax.swing.JLabel jLabelPorMacrotema;
     private javax.swing.JLabel jLabelPorTipoDeNegocio;
